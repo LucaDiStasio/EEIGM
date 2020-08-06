@@ -3,5 +3,7 @@
 \contentsline {section}{List of Symbols}{v}
 \contentsline {section}{Abstract}{vii}
 \contentsline {section}{\numberline {1}Coordonn\'ees cylindriques et sph\'eriques}{1}
+\contentsline {subsection}{\numberline {1.1}\'Enonc\'e}{1}
+\contentsline {subsection}{\numberline {1.2}Corrig\'e}{1}
 \contentsline {section}{\numberline {2}Second section}{3}
 \contentsline {section}{\numberline {A}First appendix}{5}
