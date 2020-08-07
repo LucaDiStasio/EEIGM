@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.11.20)  7 AUG 2020 12:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.11.20)  7 AUG 2020 18:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -789,14 +789,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/ccicons/m/n' will be
 (Font)              scaled to size 28.79999pt on input line 206.
-<logo-eeigm-ht90.png, id=5, 660.4675pt x 90.3375pt>
+<logo-eeigm-ht90.png, id=53, 660.4675pt x 90.3375pt>
 File: logo-eeigm-ht90.png Graphic file (type png)
 <use logo-eeigm-ht90.png>
 Package pdftex.def Info: logo-eeigm-ht90.png  used on input line 226. on input 
 line 226.
 Package pdftex.def Info: Requested size: 260.03021pt x 35.56593pt on input line
  226.
-<label-logo-ul.png, id=7, 173.64874pt x 60.225pt>
+<label-logo-ul.png, id=55, 173.64874pt x 60.225pt>
 File: label-logo-ul.png Graphic file (type png)
 <use label-logo-ul.png>
 Package pdftex.def Info: label-logo-ul.png  used on input line 226. on input li
@@ -826,17 +826,15 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 249.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 15.55188pt on input line 249.
-
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
+ (./td.toc)
 \tf@toc=\write4
 \openout4 = `td.toc'.
 
-[1] [2
+ [1] [2
 
 
-] [3] [4
+]
+[3] [4
 
 
 ] [5] [6
@@ -854,11 +852,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.352 \cleardoublepageusingstyle{scrheadings}
-                                              [1] [2
+l.404 \end{equation}
+                     [1]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+[3] [4
 
 
-] [3] [4
+] [5] [6
 
 
 ]
@@ -874,53 +876,51 @@ Class scrartcl Warning: You are using `\begin{appendix}...\end{appendix}'.
 (scrartcl)              inconsistent.
 (scrartcl)              Because of this, you should remove `\end{appendix}'
 (scrartcl)              and replace `\begin{appendix}' by command
-(scrartcl)              `\appendix' on input line 377.
+(scrartcl)              `\appendix' on input line 488.
 
-[5] [6
+[7] [8
 
 
 ]
 No file td.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 419.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 419.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 530.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 530.
 (./td.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 419.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 419.
-
-
-Package rerunfilecheck Warning: File `td.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `td.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  7928708F6A9F296F7C009FB520C7D4EF;442.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 419.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 530.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 530.
+Package rerunfilecheck Info: File `td.out' has not changed.
+(rerunfilecheck)             Checksum: B04500A37B96F16783BF7B96EFE15143;733.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 530.
  ) 
 Here is how much of TeX's memory you used:
- 13381 strings out of 492985
- 205744 string characters out of 6136283
- 398916 words of memory out of 5000000
- 16683 multiletter control sequences out of 15000+600000
- 31312 words of font info for 76 fonts, out of 8000000 for 9000
+ 13425 strings out of 492985
+ 206407 string characters out of 6136283
+ 421916 words of memory out of 5000000
+ 16704 multiletter control sequences out of 15000+600000
+ 32409 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,14n,108p,8857b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texl
 ive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2017/texmf-dist/fon
 ts/type1/public/ccicons/ccicons.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:
-/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2
-017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2017/texmf-
-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2017/texmf-dist/fonts
-/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pub
-lic/cm-super/sfxc1728.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/
-uhvb8a.pfb>
-Output written on td.pdf (15 pages, 160281 bytes).
+lic/amsfonts/cm/cmex10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
+c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2017/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2017/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-su
+per/sfbx1440.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfcc12
+00.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:
+/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2
+017/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2017/texmf-
+dist/fonts/type1/public/cm-super/sfxc1728.pfb><c:/texlive/2017/texmf-dist/fonts
+/type1/urw/helvetic/uhvb8a.pfb>
+Output written on td.pdf (17 pages, 226947 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 244 PDF objects out of 1000 (max. 8388607)
+ 201 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 107 words of extra memory for PDF output out of 10000 (max. 10000000)
 
