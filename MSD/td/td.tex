@@ -20,6 +20,9 @@ fleqn,                        % equations are aligned on the left side, comment 
 \usepackage[T1]{fontenc}      % enables "Umlaute" (not really needed for English)
 \usepackage[scaled=.90]{helvet}
 %----------------------
+% Creative Commons License
+\usepackage[scale=2]{ccicons}
+%----------------------
 % graphics
 \usepackage{graphicx}         	% package to include graphics (pdf, png, jpg)
 \usepackage{subfig}			% package for subfigures
@@ -31,7 +34,8 @@ fleqn,                        % equations are aligned on the left side, comment 
 \usepackage{amsfonts}        
 \usepackage{amssymb}          
 \usepackage{bm}               
-
+%-----------------------------
+\usepackage{hyperref}
 %--------------------------------
 % other packages
 \usepackage{enumerate}        % better listings
@@ -43,7 +47,7 @@ fleqn,                        % equations are aligned on the left side, comment 
 \usepackage{pdfpages}         % include whole pages from pdf files
 \usepackage{parskip}          % insert an empty line between paragraphs instead of an indented beginning
 \usepackage[right]{eurosym}   % Euro symbol
-\usepackage[hyphens]{url}     %enables line breaks for URLs \url{http://www}
+%\usepackage[hyphens]{url}     %enables line breaks for URLs \url{http://www}
 % set border size of page (comment if you want Latex to do this)
 \usepackage[inner=3cm,%
 								outer=2cm,%
@@ -170,7 +174,7 @@ fleqn,                        % equations are aligned on the left side, comment 
 \textbf{\'Ecole Europ\'eenne d'Ing\'enieurs en G\'enie des Mat\'eriaux}\\[0.75ex]
 \end{large}
 
-\vspace{4cm}
+\vspace{2cm}
 
 \begin{large}
 \textbf{$2^{`eme}$ Ann\'ee, $1^{er}$ Semestre}\\[0.75ex]
@@ -191,13 +195,19 @@ fleqn,                        % equations are aligned on the left side, comment 
 \textbf{Luca Di Stasio}\\[0.75ex]
 \end{large}
 
+\vspace{2cm}
 %\begin{flushright}
 %\begin{tabular}{l l }
 %{\large \textbf{Author(s):}} & {\large Luca DI STASIO}\\
 %\end{tabular}
 %\end{flushright}
 
-\vspace*{6cm}
+\begin{large}
+\ccLogo\ccAttribution\ccNonCommercial\\[0.75ex]
+Cette oeuvre est mise \`a disposition selon les termes de la\\ \href{https://creativecommons.org/licenses/by-nc/4.0/deed.fr}{Licence Creative Commons Attribution - Pas d'Utilisation Commerciale 4.0 International}.\\[0.75ex]
+\end{large}
+
+\vspace*{3cm}
 
 
 {\large \textbf{6 ao\^ut 2020}}\\
@@ -333,7 +343,7 @@ fleqn,                        % equations are aligned on the left side, comment 
 \setheadsepline{0.5pt}
 \setfootsepline{0.5pt}
 
-\section{Coordonn\'ees cylindriques et sph\'eriques}
+\section{Syst\`emes de coordonn\'ees curvilignes}
 
 \subsection{\'Enonc\'e}
 
