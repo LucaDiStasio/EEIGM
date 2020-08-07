@@ -38,6 +38,7 @@ fleqn,                        % equations are aligned on the left side, comment 
 \usepackage{hyperref}
 %--------------------------------
 % other packages
+\usepackage[makeroom]{cancel}
 \usepackage{enumerate}        % better listings
 \usepackage{booktabs}         % nicer tables (see manual for usage)
 \usepackage{textcomp}         % for \textdegree , \textcelsius , sometimes causes problems
@@ -389,9 +390,10 @@ f\left(\xi,\eta,\zeta\right)=f\left(\xi\left(x,y,z\right),\eta\left(x,y,z\right)
 
 \begin{equation}
 \begin{cases}
-\frac{\partial^{2} f}{\partial x^{2}}=\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial\xi}\frac{\partial\xi}{\partial x}+\frac{\partial f}{\partial\eta}\frac{\partial\eta}{\partial x}+\frac{\partial f}{\partial\zeta}\frac{\partial\zeta}{\partial x}\right)\\[5pt]
-\frac{\partial^{2} f}{\partial y^{2}}=\frac{\partial}{\partial y}\left(\frac{\partial f}{\partial\xi}\frac{\partial\xi}{\partial y}+\frac{\partial f}{\partial\eta}\frac{\partial\eta}{\partial y}+\frac{\partial f}{\partial\zeta}\frac{\partial\zeta}{\partial y}\right)\\[5pt]
-\frac{\partial^{2} f}{\partial z^{2}}=\frac{\partial}{\partial z}\left(\frac{\partial f}{\partial\xi}\frac{\partial\xi}{\partial z}+\frac{\partial f}{\partial\eta}\frac{\partial\eta}{\partial z}+\frac{\partial f}{\partial\zeta}\frac{\partial\zeta}{\partial z}\right)
+\frac{\partial^{2} f}{\partial x^{2}}&=\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial\xi}\frac{\partial\xi}{\partial x}+\frac{\partial f}{\partial\eta}\frac{\partial\eta}{\partial x}+\frac{\partial f}{\partial\zeta}\frac{\partial\zeta}{\partial x}\right)=\\[5pt]
+&=\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial\xi}\right)\frac{\partial\xi}{\partial x}+\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial\eta}\right)\frac{\partial\eta}{\partial x}+\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial\zeta}\right)\frac{\partial\zeta}{\partial x}+\frac{\partial f}{\partial\xi}\frac{\partial^{2}\xi}{\partial x^{2}}+\frac{\partial f}{\partial\eta}\frac{\partial^{2}\eta}{\partial x^{2}}+\frac{\partial f}{\partial\zeta}\frac{\partial^{2}\zeta}{\partial x^{2}}\\[10pt]
+\frac{\partial^{2} f}{\partial y^{2}}&=\frac{\partial}{\partial y}\left(\frac{\partial f}{\partial\xi}\frac{\partial\xi}{\partial y}+\frac{\partial f}{\partial\eta}\frac{\partial\eta}{\partial y}+\frac{\partial f}{\partial\zeta}\frac{\partial\zeta}{\partial y}\right)\\[5pt]
+\frac{\partial^{2} f}{\partial z^{2}}&=\frac{\partial}{\partial z}\left(\frac{\partial f}{\partial\xi}\frac{\partial\xi}{\partial z}+\frac{\partial f}{\partial\eta}\frac{\partial\eta}{\partial z}+\frac{\partial f}{\partial\zeta}\frac{\partial\zeta}{\partial z}\right)
 \end{cases}
 \end{equation}
 
@@ -426,6 +428,32 @@ f\left(\xi,\eta,\zeta\right)=f\left(\xi\left(x,y,z\right),\eta\left(x,y,z\right)
 \end{aligned}
 \end{equation}
 
+\begin{description}
+\item[Coordonn\'ees cylindriques]
+
+\begin{equation}
+\begin{cases}
+x=r\cos{\theta}\\
+y=r\sin{\theta}\\
+z=z
+\end{cases}\longleftrightarrow\begin{cases}
+r=\sqrt{x^{2}+y^{2}}\\
+\theta=\tan^{-1}\left(\frac{y}{x}\right)\\
+z=z
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\frac{\partial r}{\partial x}=\frac{1}{2}\frac{2x}{\sqrt{x^{2}+y^{2}}}=\frac{\cancel{r}\cos{\theta}}{\cancel{r}}\\
+\frac{\partial r}{\partial y}=\frac{1}{2}\frac{2y}{\sqrt{x^{2}+y^{2}}}=\frac{\cancel{r}\sin{\theta}}{\cancel{r}}\\
+\frac{\partial r}{\partial z}=0\\
+\end{cases}\quad
+\end{equation}
+
+\item[Coordonn\'ees spheriques]
+\end{description}
+
 \subsubsection{Probl\`eme B}
 
 \begin{equation}
@@ -449,16 +477,81 @@ f\left(\xi,\eta,\zeta\right)=f\left(\xi\left(x,y,z\right),\eta\left(x,y,z\right)
 \end{equation}
 
 \begin{equation}
+\nabla f_{xyz}=\begin{bmatrix}
+\frac{\partial f}{\partial x}\\[5pt]
+\frac{\partial f}{\partial y}\\[5pt]
+\frac{\partial f}{\partial z}
+\end{bmatrix}=\frac{\partial f}{\partial x}\begin{bmatrix}
+1\\[5pt]
+0\\[5pt]
+0
+\end{bmatrix}+\frac{\partial f}{\partial y}\begin{bmatrix}
+0\\[5pt]
+1\\[5pt]
+0
+\end{bmatrix}+\frac{\partial f}{\partial z}\begin{bmatrix}
+0\\[5pt]
+0\\[5pt]
+1
+\end{bmatrix}=\frac{\partial f}{\partial x}\mathbf{i}_{x}+\frac{\partial f}{\partial y}\mathbf{j}_{y}+\frac{\partial f}{\partial z}\mathbf{k}_{z}
+\end{equation}
+
+\begin{equation}
 \nabla f=\begin{bmatrix}
 \frac{\partial f}{\partial x}\\[5pt]
 \frac{\partial f}{\partial y}\\[5pt]
 \frac{\partial f}{\partial z}
 \end{bmatrix}=\begin{bmatrix}
 \frac{\partial f}{\partial\xi}\frac{\partial\xi}{\partial x}+\frac{\partial f}{\partial\eta}\frac{\partial\eta}{\partial x}+\frac{\partial f}{\partial\zeta}\frac{\partial\zeta}{\partial x}\\[5pt]
-\frac{\partial f}{\partial\eta}\\[5pt]
-\frac{\partial f}{\partial\zeta}
+\frac{\partial f}{\partial\xi}\frac{\partial\xi}{\partial y}+\frac{\partial f}{\partial\eta}\frac{\partial\eta}{\partial y}+\frac{\partial f}{\partial\zeta}\frac{\partial\zeta}{\partial y}\\[5pt]
+\frac{\partial f}{\partial\xi}\frac{\partial\xi}{\partial z}+\frac{\partial f}{\partial\eta}\frac{\partial\eta}{\partial z}+\frac{\partial f}{\partial\zeta}\frac{\partial\zeta}{\partial z}
+\end{bmatrix}=\frac{\partial f}{\partial\xi}\begin{bmatrix}
+\frac{\partial\xi}{\partial x}\\[5pt]
+\frac{\partial\xi}{\partial y}\\[5pt]
+\frac{\partial\xi}{\partial z}\end{bmatrix}+\frac{\partial f}{\partial\eta}\begin{bmatrix}
+\frac{\partial\eta}{\partial x}\\[5pt]
+\frac{\partial\eta}{\partial y}\\[5pt]
+\frac{\partial\eta}{\partial z}\end{bmatrix}+\frac{\partial f}{\partial\zeta}\begin{bmatrix}
+\frac{\partial\zeta}{\partial x}\\[5pt]
+\frac{\partial\zeta}{\partial y}\\[5pt]
+\frac{\partial\zeta}{\partial z}
 \end{bmatrix}
 \end{equation}
+
+\begin{equation}
+\begin{aligned}
+\mathbf{i}_{\xi}=&\frac{1}{\sqrt{\left(\frac{\partial\xi}{\partial x}\right)^{2}+\left(\frac{\partial\xi}{\partial y}\right)^{2}+\left(\frac{\partial\xi}{\partial z}\right)^{2}}}\begin{bmatrix}
+\frac{\partial\xi}{\partial x}\\[5pt]
+\frac{\partial\xi}{\partial y}\\[5pt]
+\frac{\partial\xi}{\partial z}\end{bmatrix}\\\mathbf{j}_{\eta}=&\frac{1}{\sqrt{\left(\frac{\partial\eta}{\partial x}\right)^{2}+\left(\frac{\partial\eta}{\partial y}\right)^{2}+\left(\frac{\partial\eta}{\partial z}\right)^{2}}}\begin{bmatrix}
+\frac{\partial\eta}{\partial x}\\[5pt]
+\frac{\partial\eta}{\partial y}\\[5pt]
+\frac{\partial\eta}{\partial z}\end{bmatrix}\\\mathbf{k}_{\zeta}=&\frac{1}{\sqrt{\left(\frac{\partial\zeta}{\partial x}\right)^{2}+\left(\frac{\partial\zeta}{\partial y}\right)^{2}+\left(\frac{\partial\zeta}{\partial z}\right)^{2}}}\begin{bmatrix}
+\frac{\partial\zeta}{\partial x}\\[5pt]
+\frac{\partial\zeta}{\partial y}\\[5pt]
+\frac{\partial\zeta}{\partial z}
+\end{bmatrix}
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\nabla_{\xi\eta\zeta} f=&\frac{\partial f}{\partial\xi}\sqrt{\left(\frac{\partial\xi}{\partial x}\right)^{2}+\left(\frac{\partial\xi}{\partial y}\right)^{2}+\left(\frac{\partial\xi}{\partial z}\right)^{2}}\cdot\mathbf{i}_{\xi}+\\
+&+\frac{\partial f}{\partial\eta}\sqrt{\left(\frac{\partial\eta}{\partial x}\right)^{2}+\left(\frac{\partial\eta}{\partial y}\right)^{2}+\left(\frac{\partial\eta}{\partial z}\right)^{2}}\cdot\mathbf{j}_{\eta}+\\
+&+\frac{\partial f}{\partial\zeta}\sqrt{\left(\frac{\partial\zeta}{\partial x}\right)^{2}+\left(\frac{\partial\zeta}{\partial y}\right)^{2}+\left(\frac{\partial\zeta}{\partial z}\right)^{2}}\cdot\mathbf{k}_{\zeta}=\\
+=&\begin{bmatrix}
+\frac{\partial f}{\partial\xi}\sqrt{\left(\frac{\partial\xi}{\partial x}\right)^{2}+\left(\frac{\partial\xi}{\partial y}\right)^{2}+\left(\frac{\partial\xi}{\partial z}\right)^{2}}\\[10pt]
+\frac{\partial f}{\partial\eta}\sqrt{\left(\frac{\partial\eta}{\partial x}\right)^{2}+\left(\frac{\partial\eta}{\partial y}\right)^{2}+\left(\frac{\partial\eta}{\partial z}\right)^{2}}\\[10pt]
+\frac{\partial f}{\partial\zeta}\sqrt{\left(\frac{\partial\zeta}{\partial x}\right)^{2}+\left(\frac{\partial\zeta}{\partial y}\right)^{2}+\left(\frac{\partial\zeta}{\partial z}\right)^{2}}
+\end{bmatrix}
+\end{aligned}
+\end{equation}
+
+\begin{description}
+\item[Coordonn\'ees cylindriques]
+
+\item[Coordonn\'ees spheriques]
+\end{description}
 
 \cleardoublepageusingstyle{scrheadings}
 
