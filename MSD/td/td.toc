@@ -8,6 +8,6 @@
 \contentsline {subsubsection}{\numberline {1.1.2}Probl\`eme B}{1}{subsubsection.1.1.2}
 \contentsline {subsection}{\numberline {1.2}Corrig\'e}{1}{subsection.1.2}
 \contentsline {subsubsection}{\numberline {1.2.1}Probl\`eme A}{1}{subsubsection.1.2.1}
-\contentsline {subsubsection}{\numberline {1.2.2}Probl\`eme B}{4}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2}Probl\`eme B}{5}{subsubsection.1.2.2}
 \contentsline {section}{\numberline {2}Second section}{7}{section.2}
 \contentsline {section}{\numberline {A}First appendix}{9}{appendix.A}
