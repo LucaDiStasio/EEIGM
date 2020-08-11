@@ -511,9 +511,25 @@ r=\sqrt{x^{2}+y^{2}}\\
 \frac{\partial \theta}{\partial y}&=\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{1}{x}=\\&=\frac{1}{1+\tan^{2}{\theta}}\frac{1}{r\cos{\theta}}=\frac{\cos{\theta}}{r}\\
 \frac{\partial \theta}{\partial z}&=0\\
 \end{cases}\qquad\begin{cases}
-\frac{\partial \tilde{z}}{\partial x}&=0\\
-\frac{\partial \tilde{z}}{\partial y}&=0\\
+\frac{\partial \tilde{z}}{\partial x}&=0\\&\\
+\frac{\partial \tilde{z}}{\partial y}&=0\\&\\
 \frac{\partial \tilde{z}}{\partial z}&=1\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\frac{\partial^{2} r}{\partial x^{2}}&=\frac{\partial}{\partial x}\left(\cos{\theta}\right)=\\&=-\sin{\theta}\frac{\partial \theta}{\partial x}=\frac{\sin^{2}{\theta}}{r}\\&\\&\\
+\frac{\partial^{2} r}{\partial y^{2}}&=\frac{\partial}{\partial y}\left(\sin{\theta}\right)=\\&=\cos{\theta}\frac{\partial \theta}{\partial y}=\frac{\cos^{2}{\theta}}{r}\\&\\&\\
+\frac{\partial^{2} r}{\partial z^{2}}&=0\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial^{2} \theta}{\partial x^{2}}&=\frac{\partial}{\partial x}\left(-\frac{\sin{\theta}}{r}\right)=\\&=-\frac{1}{r}\frac{\partial}{\partial x}\left(\sin{\theta}\right)-\sin{\theta}\frac{\partial}{\partial x}\left(\frac{1}{r}\right)=\\&=-\frac{\cos{\theta}}{r}\frac{\partial\theta}{\partial x}+\frac{\sin{\theta}}{r^{2}}\frac{\partial r}{\partial x}=\\&=\frac{2\sin{\theta}\cos{\theta}}{r^{2}}=\frac{\sin{2\theta}}{r^{2}}\\
+\frac{\partial^{2} \theta}{\partial y^{2}}&=\frac{\partial}{\partial y}\left(\frac{\cos{\theta}}{r}\right)=\\&=\frac{1}{r}\frac{\partial}{\partial y}\left(\cos{\theta}\right)+\cos{\theta}\frac{\partial}{\partial y}\left(\frac{1}{r}\right)=\\&=-\frac{\sin{\theta}}{r}\frac{\partial\theta}{\partial y}-\frac{\cos{\theta}}{r^{2}}\frac{\partial r}{\partial y}=\\&=-\frac{2\sin{\theta}\cos{\theta}}{r^{2}}=-\frac{\sin{2\theta}}{r^{2}}\\
+\frac{\partial^{2} \theta}{\partial z^{2}}&=0\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial^{2} \tilde{z}}{\partial x^{2}}&=0\\&\\&\\&\\
+\frac{\partial^{2} \tilde{z}}{\partial y^{2}}&=0\\&\\&\\&\\
+\frac{\partial^{2} \tilde{z}}{\partial z^{2}}&=0\\
 \end{cases}
 \end{equation}
 
