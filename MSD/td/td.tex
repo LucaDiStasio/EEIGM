@@ -356,6 +356,10 @@ Cette oeuvre est mise \`a disposition selon les termes de la\\ \href{https://cre
 
 \subsubsection{Probl\`eme A}
 
+\begin{description}
+
+\item[Rappels th\'eoriques]
+
 \begin{equation}
 \begin{cases}
 x=x\left(\xi,\eta,\zeta\right)\\
@@ -454,20 +458,20 @@ f\left(\xi,\eta,\zeta\right)=f\left(\xi\left(x,y,z\right),\eta\left(x,y,z\right)
 \end{aligned}
 \end{equation}
 
-%\begin{equation}
-%\begin{cases}
-%\frac{\partial^{2} f}{\partial x^{2}}=\left(\frac{\partial\xi}{\partial x}\frac{\partial}{\partial\xi}+\frac{\partial\eta}{\partial x}\frac{\partial}{\partial\eta}+\frac{\partial\zeta}{\partial x}\frac{\partial}{\partial\zeta}\right)\left(\frac{\partial f}{\partial\xi}\frac{\partial\xi}{\partial x}+\frac{\partial f}{\partial\eta}\frac{\partial\eta}{\partial x}+\frac{\partial f}{\partial\zeta}\frac{\partial\zeta}{\partial x}\right)\\[5pt]
-%\frac{\partial^{2} f}{\partial y^{2}}=\left(\frac{\partial\xi}{\partial y}\frac{\partial}{\partial\xi}+\frac{\partial\eta}{\partial y}\frac{\partial}{\partial\eta}+\frac{\partial\zeta}{\partial z}\frac{\partial}{\partial\zeta}\right)\left(\frac{\partial f}{\partial\xi}\frac{\partial\xi}{\partial y}+\frac{\partial f}{\partial\eta}\frac{\partial\eta}{\partial y}+\frac{\partial f}{\partial\zeta}\frac{\partial\zeta}{\partial y}\right)\\[5pt]
-%\frac{\partial^{2} f}{\partial z^{2}}=\left(\frac{\partial\xi}{\partial z}\frac{\partial}{\partial\xi}+\frac{\partial\eta}{\partial z}\frac{\partial}{\partial\eta}+\frac{\partial\zeta}{\partial z}\frac{\partial}{\partial\zeta}\right)\left(\frac{\partial f}{\partial\xi}\frac{\partial\xi}{\partial z}+\frac{\partial f}{\partial\eta}\frac{\partial\eta}{\partial z}+\frac{\partial f}{\partial\zeta}\frac{\partial\zeta}{\partial z}\right)
-%\end{cases}
-%\end{equation}
+\begin{equation}
+\begin{aligned}
+\frac{\partial^{2} f}{\partial y^{2}}&=\left(\frac{\partial\xi}{\partial y}\right)^{2}\frac{\partial^{2} f}{\partial\xi^{2}}+\left(\frac{\partial\eta}{\partial y}\right)^{2}\frac{\partial^{2} f}{\partial\eta^{2}}+\left(\frac{\partial\zeta}{\partial y}\right)^{2}\frac{\partial^{2} f}{\partial\zeta^{2}}+\\[5pt]
+&+2\left(\frac{\partial\xi}{\partial y}\right)\left(\frac{\partial\eta}{\partial y}\right)\frac{\partial^{2} f}{\partial\xi\partial\eta}+2\left(\frac{\partial\xi}{\partial y}\right)\left(\frac{\partial\zeta}{\partial y}\right)\frac{\partial^{2} f}{\partial\xi\partial\zeta}+2\left(\frac{\partial\eta}{\partial x}\right)\left(\frac{\partial\zeta}{\partial y}\right)\frac{\partial^{2} f}{\partial\eta\partial\zeta}+\\[5pt]
+&+\frac{\partial f}{\partial\xi}\frac{\partial^{2}\xi}{\partial y^{2}}+\frac{\partial f}{\partial\eta}\frac{\partial^{2}\eta}{\partial y^{2}}+\frac{\partial f}{\partial\zeta}\frac{\partial^{2}\zeta}{\partial y^{2}}\\
+\end{aligned}
+\end{equation}
 
 \begin{equation}
-\begin{cases}
-\frac{\partial^{2} f}{\partial x^{2}}=&\left(\frac{\partial\xi}{\partial x}\right)^{2}\frac{\partial^{2} f}{\partial\xi^{2}}+\left(\frac{\partial\eta}{\partial x}\right)^{2}\frac{\partial^{2} f}{\partial\eta^{2}}+\left(\frac{\partial\zeta}{\partial x}\right)^{2}\frac{\partial^{2} f}{\partial\zeta^{2}}+\\[5pt]&+2\left(\frac{\partial\xi}{\partial x}\right)\left(\frac{\partial\eta}{\partial x}\right)\frac{\partial^{2} f}{\partial\xi\partial\eta}+2\left(\frac{\partial\xi}{\partial x}\right)\left(\frac{\partial\zeta}{\partial x}\right)\frac{\partial^{2} f}{\partial\xi\partial\zeta}+2\left(\frac{\partial\eta}{\partial x}\right)\left(\frac{\partial\zeta}{\partial x}\right)\frac{\partial^{2} f}{\partial\eta\partial\zeta}\\[10pt]
-\frac{\partial^{2} f}{\partial y^{2}}=&\left(\frac{\partial\xi}{\partial y}\right)^{2}\frac{\partial^{2} f}{\partial\xi^{2}}+\left(\frac{\partial\eta}{\partial y}\right)^{2}\frac{\partial^{2} f}{\partial\eta^{2}}+\left(\frac{\partial\zeta}{\partial y}\right)^{2}\frac{\partial^{2} f}{\partial\zeta^{2}}+\\[5pt]&+2\left(\frac{\partial\xi}{\partial y}\right)\left(\frac{\partial\eta}{\partial y}\right)\frac{\partial^{2} f}{\partial\xi\partial\eta}+2\left(\frac{\partial\xi}{\partial y}\right)\left(\frac{\partial\zeta}{\partial y}\right)\frac{\partial^{2} f}{\partial\xi\partial\zeta}+2\left(\frac{\partial\eta}{\partial y}\right)\left(\frac{\partial\zeta}{\partial y}\right)\frac{\partial^{2} f}{\partial\eta\partial\zeta}\\[10pt]
-\frac{\partial^{2} f}{\partial z^{2}}=&\left(\frac{\partial\xi}{\partial z}\right)^{2}\frac{\partial^{2} f}{\partial\xi^{2}}+\left(\frac{\partial\eta}{\partial z}\right)^{2}\frac{\partial^{2} f}{\partial\eta^{2}}+\left(\frac{\partial\zeta}{\partial z}\right)^{2}\frac{\partial^{2} f}{\partial\zeta^{2}}+\\[5pt]&+2\left(\frac{\partial\xi}{\partial z}\right)\left(\frac{\partial\eta}{\partial z}\right)\frac{\partial^{2} f}{\partial\xi\partial\eta}+2\left(\frac{\partial\xi}{\partial z}\right)\left(\frac{\partial\zeta}{\partial z}\right)\frac{\partial^{2} f}{\partial\xi\partial\zeta}+2\left(\frac{\partial\eta}{\partial z}\right)\left(\frac{\partial\zeta}{\partial z}\right)\frac{\partial^{2} f}{\partial\eta\partial\zeta}\\[10pt]
-\end{cases}
+\begin{aligned}
+\frac{\partial^{2} f}{\partial z^{2}}&=\left(\frac{\partial\xi}{\partial z}\right)^{2}\frac{\partial^{2} f}{\partial\xi^{2}}+\left(\frac{\partial\eta}{\partial z}\right)^{2}\frac{\partial^{2} f}{\partial\eta^{2}}+\left(\frac{\partial\zeta}{\partial z}\right)^{2}\frac{\partial^{2} f}{\partial\zeta^{2}}+\\[5pt]
+&+2\left(\frac{\partial\xi}{\partial z}\right)\left(\frac{\partial\eta}{\partial z}\right)\frac{\partial^{2} f}{\partial\xi\partial\eta}+2\left(\frac{\partial\xi}{\partial z}\right)\left(\frac{\partial\zeta}{\partial z}\right)\frac{\partial^{2} f}{\partial\xi\partial\zeta}+2\left(\frac{\partial\eta}{\partial z}\right)\left(\frac{\partial\zeta}{\partial z}\right)\frac{\partial^{2} f}{\partial\eta\partial\zeta}+\\[5pt]
+&+\frac{\partial f}{\partial\xi}\frac{\partial^{2}\xi}{\partial z^{2}}+\frac{\partial f}{\partial\eta}\frac{\partial^{2}\eta}{\partial z^{2}}+\frac{\partial f}{\partial\zeta}\frac{\partial^{2}\zeta}{\partial z^{2}}\\
+\end{aligned}
 \end{equation}
 
 \begin{equation}
@@ -480,9 +484,6 @@ f\left(\xi,\eta,\zeta\right)=f\left(\xi\left(x,y,z\right),\eta\left(x,y,z\right)
 &+2\left[\left(\frac{\partial\xi}{\partial x}\right)\left(\frac{\partial\zeta}{\partial x}\right)+\left(\frac{\partial\xi}{\partial y}\right)\left(\frac{\partial\zeta}{\partial y}\right)+\left(\frac{\partial\xi}{\partial z}\right)\left(\frac{\partial\zeta}{\partial z}\right)\right]\frac{\partial^{2} f}{\partial\xi\partial\zeta}\\
 \end{aligned}
 \end{equation}
-
-\begin{description}
-\item[Coordonn\'ees cylindriques]
 
 \begin{equation}
 \begin{cases}
