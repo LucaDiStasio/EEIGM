@@ -339,7 +339,7 @@ Cette oeuvre est mise \`a disposition selon les termes de la\\ \href{https://cre
 %\cfoot[]{\pagemark}
 %\ihead{}
 %\ohead{}
-\ohead{Introduction}
+\ohead{TD 1}
 \setheadtopline{2pt}
 \setheadsepline{0.5pt}
 \setfootsepline{0.5pt}
@@ -349,6 +349,13 @@ Cette oeuvre est mise \`a disposition selon les termes de la\\ \href{https://cre
 \subsection{\'Enonc\'e}
 
 \subsubsection{Probl\`eme A}
+
+Exprimer l'op\'erateur laplacien $\nabla^{2}$ en
+
+\begin{enumerate}
+\item coordonn\'ees cylindriques,
+\item coordonn\'ees spheriques.
+\end{enumerate}
 
 \subsubsection{Probl\`eme B}
 
@@ -543,6 +550,35 @@ r=\sqrt{x^{2}+y^{2}}\\
 \end{equation}
 
 \item[Coordonn\'ees spheriques]
+
+\begin{equation}
+\begin{cases}
+x=r\sin{\theta}\cos{\varphi}\\
+y=r\sin{\theta}\sin{\varphi}\\
+z=r\cos{\theta}
+\end{cases}\longleftrightarrow\begin{cases}
+r=\sqrt{x^{2}+y^{2}+z^{2}}\\
+\varphi=\tan^{-1}\left(\frac{y}{x}\right)\\
+\theta=\tan^{-1}\left(\frac{\sqrt{x^{2}+y^{2}}}{z}\right)\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\frac{\partial r}{\partial x}&=\frac{1}{2}\frac{2x}{\sqrt{x^{2}+y^{2}}}=\\&=\frac{\cancel{r}\cos{\theta}}{\cancel{r}}\\
+\frac{\partial r}{\partial y}&=\frac{1}{2}\frac{2y}{\sqrt{x^{2}+y^{2}}}=\\&=\frac{\cancel{r}\sin{\theta}}{\cancel{r}}\\
+\frac{\partial r}{\partial z}&=0\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial \varphi}{\partial x}&=-\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{y}{x^{2}}=\\&=-\frac{1}{1+\tan^{2}{\theta}}\frac{r\sin{\theta}}{r^{2}\cos^{2}{\theta}}=-\frac{\sin{\theta}}{r}\\
+\frac{\partial \varphi}{\partial y}&=\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{1}{x}=\\&=\frac{1}{1+\tan^{2}{\theta}}\frac{1}{r\cos{\theta}}=\frac{\cos{\theta}}{r}\\
+\frac{\partial \varphi}{\partial z}&=0\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial \theta}{\partial x}&=0\\&\\
+\frac{\partial \theta}{\partial y}&=0\\&\\
+\frac{\partial \theta}{\partial z}&=1\\
+\end{cases}
+\end{equation}
+
 \end{description}
 
 \subsubsection{Probl\`eme B}
