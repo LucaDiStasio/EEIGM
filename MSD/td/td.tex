@@ -493,23 +493,27 @@ f\left(\xi,\eta,\zeta\right)=f\left(\xi\left(x,y,z\right),\eta\left(x,y,z\right)
 \begin{cases}
 x=r\cos{\theta}\\
 y=r\sin{\theta}\\
-z=z
+z=\tilde{z}
 \end{cases}\longleftrightarrow\begin{cases}
 r=\sqrt{x^{2}+y^{2}}\\
 \theta=\tan^{-1}\left(\frac{y}{x}\right)\\
-z=z
+\tilde{z}=z
 \end{cases}
 \end{equation}
 
 \begin{equation}
 \begin{cases}
-\frac{\partial r}{\partial x}=\frac{1}{2}\frac{2x}{\sqrt{x^{2}+y^{2}}}=\frac{\cancel{r}\cos{\theta}}{\cancel{r}}\\
-\frac{\partial r}{\partial y}=\frac{1}{2}\frac{2y}{\sqrt{x^{2}+y^{2}}}=\frac{\cancel{r}\sin{\theta}}{\cancel{r}}\\
-\frac{\partial r}{\partial z}=0\\
-\end{cases}\quad\begin{cases}
-\frac{\partial \theta}{\partial x}=-\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{y}{x^{2}}\\
-\frac{\partial \theta}{\partial y}=\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{1}{x}\\
-\frac{\partial \theta}{\partial z}=0\\
+\frac{\partial r}{\partial x}&=\frac{1}{2}\frac{2x}{\sqrt{x^{2}+y^{2}}}=\\&=\frac{\cancel{r}\cos{\theta}}{\cancel{r}}\\
+\frac{\partial r}{\partial y}&=\frac{1}{2}\frac{2y}{\sqrt{x^{2}+y^{2}}}=\\&=\frac{\cancel{r}\sin{\theta}}{\cancel{r}}\\
+\frac{\partial r}{\partial z}&=0\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial \theta}{\partial x}&=-\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{y}{x^{2}}=\\&=-\frac{1}{1+\tan^{2}{\theta}}\frac{r\sin{\theta}}{r^{2}\cos^{2}{\theta}}=-\frac{\sin{\theta}}{r}\\
+\frac{\partial \theta}{\partial y}&=\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{1}{x}=\\&=\frac{1}{1+\tan^{2}{\theta}}\frac{1}{r\cos{\theta}}=\frac{\cos{\theta}}{r}\\
+\frac{\partial \theta}{\partial z}&=0\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial \tilde{z}}{\partial x}&=0\\
+\frac{\partial \tilde{z}}{\partial y}&=0\\
+\frac{\partial \tilde{z}}{\partial z}&=1\\
 \end{cases}
 \end{equation}
 
