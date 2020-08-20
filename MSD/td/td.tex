@@ -565,17 +565,17 @@ r=\sqrt{x^{2}+y^{2}+z^{2}}\\
 
 \begin{equation}
 \begin{cases}
-\frac{\partial r}{\partial x}&=\frac{1}{2}\frac{2x}{\sqrt{x^{2}+y^{2}}}=\\&=\frac{\cancel{r}\cos{\theta}}{\cancel{r}}\\
-\frac{\partial r}{\partial y}&=\frac{1}{2}\frac{2y}{\sqrt{x^{2}+y^{2}}}=\\&=\frac{\cancel{r}\sin{\theta}}{\cancel{r}}\\
-\frac{\partial r}{\partial z}&=0\\
+\frac{\partial r}{\partial x}&=\frac{1}{2}\frac{2x}{\sqrt{x^{2}+y^{2}+z^{2}}}=\\&=\frac{\cancel{r}\sin{\theta}\cos{\varphi}}{\cancel{r}}\\
+\frac{\partial r}{\partial y}&=\frac{1}{2}\frac{2y}{\sqrt{x^{2}+y^{2}+z^{2}}}=\\&=\frac{\cancel{r}\sin{\theta}\sin{\varphi}}{\cancel{r}}\\
+\frac{\partial r}{\partial z}&=\frac{1}{2}\frac{2z}{\sqrt{x^{2}+y^{2}+z^{2}}}=\\&=\frac{\cancel{r}\cos{\theta}}{\cancel{r}}\\
 \end{cases}\qquad\begin{cases}
-\frac{\partial \varphi}{\partial x}&=-\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{y}{x^{2}}=\\&=-\frac{1}{1+\tan^{2}{\theta}}\frac{r\sin{\theta}}{r^{2}\cos^{2}{\theta}}=-\frac{\sin{\theta}}{r}\\
-\frac{\partial \varphi}{\partial y}&=\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{1}{x}=\\&=\frac{1}{1+\tan^{2}{\theta}}\frac{1}{r\cos{\theta}}=\frac{\cos{\theta}}{r}\\
+\frac{\partial \varphi}{\partial x}&=-\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{y}{x^{2}}=\\&=-\frac{\sin{\varphi}}{r\sin{\theta}}\\
+\frac{\partial \varphi}{\partial y}&=\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{1}{x}=\\&=\frac{\cos{\varphi}}{r\sin{\theta}}\\
 \frac{\partial \varphi}{\partial z}&=0\\
 \end{cases}\qquad\begin{cases}
-\frac{\partial \theta}{\partial x}&=0\\&\\
-\frac{\partial \theta}{\partial y}&=0\\&\\
-\frac{\partial \theta}{\partial z}&=1\\
+\frac{\partial \theta}{\partial x}&=\frac{1}{1+\left(\frac{\sqrt{x^{2}+y^{2}}}{z}\right)^{2}}\frac{\cancel{2}x}{\cancel{2}z\sqrt{x^{2}+y^{2}}}=\\&=\frac{1}{r}\cos{\theta}\cos{\varphi}\\
+\frac{\partial \theta}{\partial y}&=\frac{1}{1+\left(\frac{\sqrt{x^{2}+y^{2}}}{z}\right)^{2}}\frac{\cancel{2}y}{\cancel{2}z\sqrt{x^{2}+y^{2}}}=\\&=\frac{1}{r}\cos{\theta}\sin{\varphi}\\
+\frac{\partial \theta}{\partial z}&=-\frac{1}{1+\left(\frac{\sqrt{x^{2}+y^{2}}}{z}\right)^{2}}\frac{\sqrt{x^{2}+y^{2}}}{z^{2}}=\\&=-\frac{1}{r}\sin{\theta}\\
 \end{cases}
 \end{equation}
 
@@ -692,6 +692,86 @@ f\left(\xi,\eta,\zeta\right)=f\left(\xi\left(x,y,z\right),\eta\left(x,y,z\right)
 
 \begin{description}
 \item[Coordonn\'ees cylindriques]
+
+\begin{equation}
+\begin{cases}
+x=r\cos{\theta}\\
+y=r\sin{\theta}\\
+z=\tilde{z}
+\end{cases}\longleftrightarrow\begin{cases}
+r=\sqrt{x^{2}+y^{2}}\\
+\theta=\tan^{-1}\left(\frac{y}{x}\right)\\
+\tilde{z}=z
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\frac{\partial r}{\partial x}&=\frac{1}{2}\frac{2x}{\sqrt{x^{2}+y^{2}}}=\\&=\frac{\cancel{r}\cos{\theta}}{\cancel{r}}\\
+\frac{\partial r}{\partial y}&=\frac{1}{2}\frac{2y}{\sqrt{x^{2}+y^{2}}}=\\&=\frac{\cancel{r}\sin{\theta}}{\cancel{r}}\\
+\frac{\partial r}{\partial z}&=0\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial \theta}{\partial x}&=-\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{y}{x^{2}}=\\&=-\frac{1}{1+\tan^{2}{\theta}}\frac{r\sin{\theta}}{r^{2}\cos^{2}{\theta}}=-\frac{\sin{\theta}}{r}\\
+\frac{\partial \theta}{\partial y}&=\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{1}{x}=\\&=\frac{1}{1+\tan^{2}{\theta}}\frac{1}{r\cos{\theta}}=\frac{\cos{\theta}}{r}\\
+\frac{\partial \theta}{\partial z}&=0\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial \tilde{z}}{\partial x}&=0\\&\\
+\frac{\partial \tilde{z}}{\partial y}&=0\\&\\
+\frac{\partial \tilde{z}}{\partial z}&=1\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\frac{\partial^{2} r}{\partial x^{2}}&=\frac{\partial}{\partial x}\left(\cos{\theta}\right)=\\&=-\sin{\theta}\frac{\partial \theta}{\partial x}=\frac{\sin^{2}{\theta}}{r}\\&\\&\\
+\frac{\partial^{2} r}{\partial y^{2}}&=\frac{\partial}{\partial y}\left(\sin{\theta}\right)=\\&=\cos{\theta}\frac{\partial \theta}{\partial y}=\frac{\cos^{2}{\theta}}{r}\\&\\&\\
+\frac{\partial^{2} r}{\partial z^{2}}&=0\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial^{2} \theta}{\partial x^{2}}&=\frac{\partial}{\partial x}\left(-\frac{\sin{\theta}}{r}\right)=\\&=-\frac{1}{r}\frac{\partial}{\partial x}\left(\sin{\theta}\right)-\sin{\theta}\frac{\partial}{\partial x}\left(\frac{1}{r}\right)=\\&=-\frac{\cos{\theta}}{r}\frac{\partial\theta}{\partial x}+\frac{\sin{\theta}}{r^{2}}\frac{\partial r}{\partial x}=\\&=\frac{2\sin{\theta}\cos{\theta}}{r^{2}}=\frac{\sin{2\theta}}{r^{2}}\\
+\frac{\partial^{2} \theta}{\partial y^{2}}&=\frac{\partial}{\partial y}\left(\frac{\cos{\theta}}{r}\right)=\\&=\frac{1}{r}\frac{\partial}{\partial y}\left(\cos{\theta}\right)+\cos{\theta}\frac{\partial}{\partial y}\left(\frac{1}{r}\right)=\\&=-\frac{\sin{\theta}}{r}\frac{\partial\theta}{\partial y}-\frac{\cos{\theta}}{r^{2}}\frac{\partial r}{\partial y}=\\&=-\frac{2\sin{\theta}\cos{\theta}}{r^{2}}=-\frac{\sin{2\theta}}{r^{2}}\\
+\frac{\partial^{2} \theta}{\partial z^{2}}&=0\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial^{2} \tilde{z}}{\partial x^{2}}&=0\\&\\&\\&\\
+\frac{\partial^{2} \tilde{z}}{\partial y^{2}}&=0\\&\\&\\&\\
+\frac{\partial^{2} \tilde{z}}{\partial z^{2}}&=0\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\sqrt{\left(\frac{\partial r}{\partial x}\right)^{2}+\left(\frac{\partial r}{\partial y}\right)^{2}+\left(\frac{\partial r}{\partial z}\right)^{2}}=1\\
+\sqrt{\left(\frac{\partial\theta}{\partial x}\right)^{2}+\left(\frac{\partial\theta}{\partial y}\right)^{2}+\left(\frac{\partial\theta}{\partial z}\right)^{2}}=\frac{1}{r}\\
+\sqrt{\left(\frac{\partial\tilde{z}}{\partial x}\right)^{2}+\left(\frac{\partial\tilde{z}}{\partial y}\right)^{2}+\left(\frac{\partial\tilde{z}}{\partial z}\right)^{2}}=1
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\mathbf{i}_{r}=&\begin{bmatrix}
+\cos{\theta}\\[5pt]
+\sin{\theta}\\[5pt]
+0\end{bmatrix}\\
+\mathbf{j}_{\theta}=&\begin{bmatrix}
+-\sin{\theta}\\[5pt]
+\cos{\theta}\\[5pt]
+0\end{bmatrix}\\
+\mathbf{k}_{\zeta}=&\begin{bmatrix}
+0\\[5pt]
+0\\[5pt]
+1
+\end{bmatrix}
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\nabla_{r\theta\tilde{z}} f=&\begin{bmatrix}
+\frac{\partial f}{\partial r}\\[10pt]
+\frac{1}{r}\frac{\partial f}{\partial\theta}\\[10pt]
+\frac{\partial f}{\partial\tilde{z}}
+\end{bmatrix}
+\end{aligned}
+\end{equation}
 
 \item[Coordonn\'ees spheriques]
 \end{description}
