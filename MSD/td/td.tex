@@ -579,6 +579,22 @@ r=\sqrt{x^{2}+y^{2}+z^{2}}\\
 \end{cases}
 \end{equation}
 
+\begin{equation}
+\begin{cases}
+\frac{\partial^{2} r}{\partial x^{2}}&=\frac{1}{2}\frac{2x}{\sqrt{x^{2}+y^{2}}}=\\&=\frac{\cancel{r}\cos{\theta}}{\cancel{r}}\\
+\frac{\partial^{2} r}{\partial y^{2}}&=\frac{1}{2}\frac{2y}{\sqrt{x^{2}+y^{2}}}=\\&=\frac{\cancel{r}\sin{\theta}}{\cancel{r}}\\
+\frac{\partial^{2} r}{\partial z^{2}}&=0\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial^{2} \varphi}{\partial x^{2}}&=-\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{y}{x^{2}}=\\&=-\frac{1}{1+\tan^{2}{\theta}}\frac{r\sin{\theta}}{r^{2}\cos^{2}{\theta}}=-\frac{\sin{\theta}}{r}\\
+\frac{\partial^{2} \varphi}{\partial y^{2}}&=\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{1}{x}=\\&=\frac{1}{1+\tan^{2}{\theta}}\frac{1}{r\cos{\theta}}=\frac{\cos{\theta}}{r}\\
+\frac{\partial^{2} \varphi}{\partial z^{2}}&=0\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial^{2} \theta}{\partial x^{2}}&=0\\&\\
+\frac{\partial^{2} \theta}{\partial y^{2}}&=0\\&\\
+\frac{\partial^{2} \theta}{\partial z^{2}}&=1\\
+\end{cases}
+\end{equation}
+
 \end{description}
 
 \subsubsection{Probl\`eme B}
