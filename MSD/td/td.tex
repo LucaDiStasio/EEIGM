@@ -581,17 +581,28 @@ r=\sqrt{x^{2}+y^{2}+z^{2}}\\
 
 \begin{equation}
 \begin{cases}
-\frac{\partial^{2} r}{\partial x^{2}}&=\frac{1}{2}\frac{2x}{\sqrt{x^{2}+y^{2}}}=\\&=\frac{\cancel{r}\cos{\theta}}{\cancel{r}}\\
-\frac{\partial^{2} r}{\partial y^{2}}&=\frac{1}{2}\frac{2y}{\sqrt{x^{2}+y^{2}}}=\\&=\frac{\cancel{r}\sin{\theta}}{\cancel{r}}\\
-\frac{\partial^{2} r}{\partial z^{2}}&=0\\
-\end{cases}\qquad\begin{cases}
-\frac{\partial^{2} \varphi}{\partial x^{2}}&=-\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{y}{x^{2}}=\\&=-\frac{1}{1+\tan^{2}{\theta}}\frac{r\sin{\theta}}{r^{2}\cos^{2}{\theta}}=-\frac{\sin{\theta}}{r}\\
-\frac{\partial^{2} \varphi}{\partial y^{2}}&=\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{1}{x}=\\&=\frac{1}{1+\tan^{2}{\theta}}\frac{1}{r\cos{\theta}}=\frac{\cos{\theta}}{r}\\
+\frac{\partial^{2} r}{\partial x^{2}}&=\cos{\theta}\cos{\varphi}\frac{\partial \theta}{\partial x}-\sin{\theta}\sin{\varphi}\frac{\partial\varphi}{\partial x}=\\&=\frac{1}{r}\left(\cos^{2}{\varphi}\cos^{2}{\theta}+\sin^{2}{\varphi}\right)\\
+\frac{\partial^{2} r}{\partial y^{2}}&=\cos{\theta}\sin{\varphi}\frac{\partial \theta}{\partial y}+\sin{\theta}\cos{\varphi}\frac{\partial\varphi}{\partial y}=\\&=\frac{1}{r}\left(\sin^{2}{\varphi}\cos^{2}{\theta}+\cos^{2}{\varphi}\right)\\
+\frac{\partial^{2} r}{\partial z^{2}}&=-\sin{\theta}\frac{\partial\theta}{\partial z}=\\&=\frac{1}{r}\sin^{2}{\theta}\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\frac{\partial^{2} \theta}{\partial x^{2}}&=-\frac{1}{r^{2}}\cos{\varphi}\cos{\theta}\frac{\partial r}{\partial x}-\frac{1}{r}\sin{\varphi}\cos{\theta}\frac{\partial \varphi}{\partial x}-\frac{1}{r}\cos{\varphi}\sin{\theta}\frac{\partial \theta}{\partial x}=\\
+&=-\frac{2}{r^{2}}\cos^{2}{\varphi}\cos{\theta}\sin{\theta}+\frac{1}{r^{2}}\frac{\sin^{2}{\theta}}{\tan{\theta}}\\
+\frac{\partial^{2} \varphi}{\partial y^{2}}&=-\frac{1}{r^{2}}\sin{\varphi}\cos{\theta}\frac{\partial r}{\partial y}-\frac{1}{r}\sin{\varphi}\sin{\theta}\frac{\partial \varphi}{\partial y}+\frac{1}{r}\cos{\varphi}\cos{\theta}\frac{\partial \theta}{\partial y}=\\
+&=-\frac{2}{r^{2}}\sin^{2}{\varphi}\cos{\theta}\sin{\theta}+\frac{1}{r^{2}}\frac{\cos^{2}{\varphi}}{\tan{\theta}}\\
+\frac{\partial^{2}\theta}{\partial z^{2}}&=\frac{1}{r^{2}}\sin{\theta}\frac{\partial r}{\partial z}-\frac{1}{r}\cos{\theta}\frac{\partial\theta}{\partial z}=\\
+&=\frac{2}{r^{2}}\cos{\theta}\sin{\theta}
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\frac{\partial^{2} \varphi}{\partial x^{2}}&=0\\&\\
+\frac{\partial^{2} \varphi}{\partial y^{2}}&=0\\&\\
 \frac{\partial^{2} \varphi}{\partial z^{2}}&=0\\
-\end{cases}\qquad\begin{cases}
-\frac{\partial^{2} \theta}{\partial x^{2}}&=0\\&\\
-\frac{\partial^{2} \theta}{\partial y^{2}}&=0\\&\\
-\frac{\partial^{2} \theta}{\partial z^{2}}&=1\\
 \end{cases}
 \end{equation}
 
