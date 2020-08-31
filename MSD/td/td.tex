@@ -589,6 +589,14 @@ r=\sqrt{x^{2}+y^{2}+z^{2}}\\
 
 \begin{equation}
 \begin{cases}
+\frac{\partial^{2} \varphi}{\partial x^{2}}&=\frac{1}{r^{2}}\frac{\sin{\varphi}}{\sin{\theta}}\frac{\partial r}{\partial x}-\frac{1}{r}\frac{\cos{\varphi}}{\sin{\theta}}\frac{\partial\varphi}{\partial x}+\frac{1}{r}\frac{\sin{\varphi}}{\sin^{2}{\theta}}\cos{\theta}\frac{\partial\theta}{\partial x}=\\=&\frac{1}{r^{2}}\sin{\varphi}\cos{\varphi}+\frac{1}{r^{2}}\frac{\sin{\varphi}\cos{\varphi}}{\sin^{2}{\theta}}+\frac{1}{r^{2}}\frac{\sin{\varphi}\cos{\varphi}}{\tan^{2}{\theta}}\\
+\frac{\partial^{2} \varphi}{\partial y^{2}}&=-\frac{1}{r^{2}}\frac{\cos{\varphi}}{\sin{\theta}}\frac{\partial r}{\partial y}-\frac{1}{r}\frac{\sin{\varphi}}{\sin{\theta}}\frac{\partial\varphi}{\partial y}-\frac{1}{r}\frac{\cos{\varphi}}{\sin^{2}{\theta}}\cos{\theta}\frac{\partial\theta}{\partial y}=\\=&-\frac{1}{r^{2}}\sin{\varphi}\cos{\varphi}-\frac{1}{r^{2}}\frac{\sin{\varphi}\cos{\varphi}}{\sin^{2}{\theta}}-\frac{1}{r^{2}}\frac{\sin{\varphi}\cos{\varphi}}{\tan^{2}{\theta}}\\
+\frac{\partial^{2} \varphi}{\partial z^{2}}&=0\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
 \frac{\partial^{2} \theta}{\partial x^{2}}&=-\frac{1}{r^{2}}\cos{\varphi}\cos{\theta}\frac{\partial r}{\partial x}-\frac{1}{r}\sin{\varphi}\cos{\theta}\frac{\partial \varphi}{\partial x}-\frac{1}{r}\cos{\varphi}\sin{\theta}\frac{\partial \theta}{\partial x}=\\
 &=-\frac{2}{r^{2}}\cos^{2}{\varphi}\cos{\theta}\sin{\theta}+\frac{1}{r^{2}}\frac{\sin^{2}{\theta}}{\tan{\theta}}\\
 \frac{\partial^{2} \varphi}{\partial y^{2}}&=-\frac{1}{r^{2}}\sin{\varphi}\cos{\theta}\frac{\partial r}{\partial y}-\frac{1}{r}\sin{\varphi}\sin{\theta}\frac{\partial \varphi}{\partial y}+\frac{1}{r}\cos{\varphi}\cos{\theta}\frac{\partial \theta}{\partial y}=\\
