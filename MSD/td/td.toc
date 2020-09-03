@@ -1,7 +1,4 @@
-\select@language {english}
-\contentsline {section}{List of Acronyms}{iii}{section*.2}
-\contentsline {section}{List of Symbols}{v}{section*.3}
-\contentsline {section}{Abstract}{vii}{section*.4}
+\select@language {french}
 \contentsline {section}{\numberline {1}Syst\`emes de coordonn\'ees curvilignes}{1}{section.1}
 \contentsline {subsection}{\numberline {1.1}\'Enonc\'e}{1}{subsection.1.1}
 \contentsline {subsubsection}{\numberline {1.1.1}Probl\`eme A}{1}{subsubsection.1.1.1}
@@ -11,5 +8,3 @@
 \contentsline {subsubsection}{\numberline {1.2.1}Probl\`eme A}{2}{subsubsection.1.2.1}
 \contentsline {subsubsection}{\numberline {1.2.2}Probl\`eme B}{7}{subsubsection.1.2.2}
 \contentsline {subsubsection}{\numberline {1.2.3}Probl\`eme C}{14}{subsubsection.1.2.3}
-\contentsline {section}{\numberline {2}Second section}{19}{section.2}
-\contentsline {section}{\numberline {A}First appendix}{21}{appendix.A}

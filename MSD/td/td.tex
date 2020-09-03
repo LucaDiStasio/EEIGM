@@ -14,7 +14,7 @@ fleqn,                        % equations are aligned on the left side, comment 
 %-----------------------------------------------------------------------------------
 % symbols and orthography
 \usepackage[latin1]{inputenc} % symbol set 
-\usepackage[english]{babel}   	% englisch orthography
+\usepackage[english,french]{babel}   	% englisch orthography
 %\usepackage[french]{babel}	   % french					
 %\usepackage[ngerman]{babel}   % german
 \usepackage[T1]{fontenc}      % enables "Umlaute" (not really needed for English)
@@ -247,7 +247,7 @@ Cette oeuvre est mise \`a disposition selon les termes de la\\ \href{https://cre
 %\cfoot[]{\pagemark}
 %\ihead{}
 %\ohead{}
-\ohead{Contents}
+\ohead{Table des mati\`eres}
 \setheadtopline{2pt}
 \setheadsepline{0.5pt}
 \setfootsepline{0.5pt}
@@ -260,67 +260,67 @@ Cette oeuvre est mise \`a disposition selon les termes de la\\ \href{https://cre
 %            List of Acronyms
 %------------------------------------------------%
 
-\clearscrheadings
-\pagestyle{scrheadings}
-\manualmark
-\ofoot{\\ \pagemark} % ofoo
-\ifoot{} % ofoo
-%\cfoot[]{\pagemark}
-%\ihead{}
-%\ohead{}
-\ohead{List of Acronyms}
-\setheadtopline{2pt}
-\setheadsepline{0.5pt}
-\setfootsepline{0.5pt}
-
-\section*{List of Acronyms}
-\addcontentsline{toc}{section}{List of Acronyms}
-
-\cleardoublepageusingstyle{scrheadings}
+%\clearscrheadings
+%\pagestyle{scrheadings}
+%\manualmark
+%\ofoot{\\ \pagemark} % ofoo
+%\ifoot{} % ofoo
+%%\cfoot[]{\pagemark}
+%%\ihead{}
+%%\ohead{}
+%\ohead{List of Acronyms}
+%\setheadtopline{2pt}
+%\setheadsepline{0.5pt}
+%\setfootsepline{0.5pt}
+%
+%\section*{List of Acronyms}
+%\addcontentsline{toc}{section}{List of Acronyms}
+%
+%\cleardoublepageusingstyle{scrheadings}
 
 %------------------------------------------------%
 %            List of Symbols
 %------------------------------------------------%
 
-\clearscrheadings
-\pagestyle{scrheadings}
-\manualmark
-\ofoot{\\ \pagemark} % ofoo
-\ifoot{} % ofoo
-%\cfoot[]{\pagemark}
-%\ihead{}
-%\ohead{}
-\ohead{List of Symbols}
-\setheadtopline{2pt}
-\setheadsepline{0.5pt}
-\setfootsepline{0.5pt}
-
-\section*{List of Symbols}
-\addcontentsline{toc}{section}{List of Symbols}
-
-\cleardoublepageusingstyle{scrheadings}
+%\clearscrheadings
+%\pagestyle{scrheadings}
+%\manualmark
+%\ofoot{\\ \pagemark} % ofoo
+%\ifoot{} % ofoo
+%%\cfoot[]{\pagemark}
+%%\ihead{}
+%%\ohead{}
+%\ohead{List of Symbols}
+%\setheadtopline{2pt}
+%\setheadsepline{0.5pt}
+%\setfootsepline{0.5pt}
+%
+%\section*{List of Symbols}
+%\addcontentsline{toc}{section}{List of Symbols}
+%
+%\cleardoublepageusingstyle{scrheadings}
 
 %------------------------------------------------%
 %                       Abstract
 %------------------------------------------------%
 
-\clearscrheadings
-\pagestyle{scrheadings}
-\manualmark
-\ofoot{\\ \pagemark} % ofoo
-\ifoot{} % ofoo
-%\cfoot[]{\pagemark}
-%\ihead{}
-%\ohead{}
-\ohead{Abstract}
-\setheadtopline{2pt}
-\setheadsepline{0.5pt}
-\setfootsepline{0.5pt}
-
-\section*{Abstract}
-\addcontentsline{toc}{section}{Abstract}
-
-\cleardoublepageusingstyle{scrheadings}
+%\clearscrheadings
+%\pagestyle{scrheadings}
+%\manualmark
+%\ofoot{\\ \pagemark} % ofoo
+%\ifoot{} % ofoo
+%%\cfoot[]{\pagemark}
+%%\ihead{}
+%%\ohead{}
+%\ohead{Abstract}
+%\setheadtopline{2pt}
+%\setheadsepline{0.5pt}
+%\setfootsepline{0.5pt}
+%
+%\section*{Abstract}
+%\addcontentsline{toc}{section}{Abstract}
+%
+%\cleardoublepageusingstyle{scrheadings}
 
 %------------------------------------------------%
 %------------------------------------------------%
@@ -384,6 +384,13 @@ Exprimer l'op\'erateur laplacien $\nabla^{2}$ en
 \end{enumerate}
 
 \subsubsection{Probl\`eme C}
+
+D\'eriver l'expression des vecteurs de la base contravariante et du gradient d'un fonction scalaire $\nabla f$ en
+
+\begin{enumerate}
+\item coordonn\'ees cylindriques,
+\item coordonn\'ees spheriques.
+\end{enumerate}
 
 \newpage
 
@@ -1037,6 +1044,9 @@ r=\sqrt{x^{2}+y^{2}+z^{2}}\\
 
 \subsubsection{Probl\`eme C}
 
+\begin{description}
+\item[Rappels th\'eoriques]
+
 \begin{equation}
 \begin{cases}
 x=x\left(\xi,\eta,\zeta\right)\\
@@ -1119,9 +1129,9 @@ f\left(\xi,\eta,\zeta\right)=f\left(\xi\left(x,y,z\right),\eta\left(x,y,z\right)
 
 \begin{equation}
 \begin{aligned}
-\nabla_{\xi\eta\zeta} f=&\frac{\partial f}{\partial\xi}\sqrt{\left(\frac{\partial\xi}{\partial x}\right)^{2}+\left(\frac{\partial\xi}{\partial y}\right)^{2}+\left(\frac{\partial\xi}{\partial z}\right)^{2}}\cdot\mathbf{i}_{\xi}+\\
-&+\frac{\partial f}{\partial\eta}\sqrt{\left(\frac{\partial\eta}{\partial x}\right)^{2}+\left(\frac{\partial\eta}{\partial y}\right)^{2}+\left(\frac{\partial\eta}{\partial z}\right)^{2}}\cdot\mathbf{j}_{\eta}+\\
-&+\frac{\partial f}{\partial\zeta}\sqrt{\left(\frac{\partial\zeta}{\partial x}\right)^{2}+\left(\frac{\partial\zeta}{\partial y}\right)^{2}+\left(\frac{\partial\zeta}{\partial z}\right)^{2}}\cdot\mathbf{k}_{\zeta}=\\
+\nabla_{\xi\eta\zeta} f=&\frac{\partial f}{\partial\xi}\sqrt{\left(\frac{\partial\xi}{\partial x}\right)^{2}+\left(\frac{\partial\xi}{\partial y}\right)^{2}+\left(\frac{\partial\xi}{\partial z}\right)^{2}}\cdot\mathbf{i}^{\xi}+\\
+&+\frac{\partial f}{\partial\eta}\sqrt{\left(\frac{\partial\eta}{\partial x}\right)^{2}+\left(\frac{\partial\eta}{\partial y}\right)^{2}+\left(\frac{\partial\eta}{\partial z}\right)^{2}}\cdot\mathbf{j}^{\eta}+\\
+&+\frac{\partial f}{\partial\zeta}\sqrt{\left(\frac{\partial\zeta}{\partial x}\right)^{2}+\left(\frac{\partial\zeta}{\partial y}\right)^{2}+\left(\frac{\partial\zeta}{\partial z}\right)^{2}}\cdot\mathbf{k}^{\zeta}=\\
 =&\begin{bmatrix}
 \frac{\partial f}{\partial\xi}\sqrt{\left(\frac{\partial\xi}{\partial x}\right)^{2}+\left(\frac{\partial\xi}{\partial y}\right)^{2}+\left(\frac{\partial\xi}{\partial z}\right)^{2}}\\[10pt]
 \frac{\partial f}{\partial\eta}\sqrt{\left(\frac{\partial\eta}{\partial x}\right)^{2}+\left(\frac{\partial\eta}{\partial y}\right)^{2}+\left(\frac{\partial\eta}{\partial z}\right)^{2}}\\[10pt]
@@ -1130,7 +1140,8 @@ f\left(\xi,\eta,\zeta\right)=f\left(\xi\left(x,y,z\right),\eta\left(x,y,z\right)
 \end{aligned}
 \end{equation}
 
-\begin{description}
+\newpage
+
 \item[Coordonn\'ees cylindriques]
 
 \begin{equation}
@@ -1187,15 +1198,15 @@ r=\sqrt{x^{2}+y^{2}}\\
 
 \begin{equation}
 \begin{aligned}
-\mathbf{i}_{r}=&\begin{bmatrix}
+\mathbf{i}^{r}=&\begin{bmatrix}
 \cos{\theta}\\[5pt]
 \sin{\theta}\\[5pt]
 0\end{bmatrix}\\
-\mathbf{j}_{\theta}=&\begin{bmatrix}
+\mathbf{j}^{\theta}=&\begin{bmatrix}
 -\sin{\theta}\\[5pt]
 \cos{\theta}\\[5pt]
 0\end{bmatrix}\\
-\mathbf{k}_{\zeta}=&\begin{bmatrix}
+\mathbf{k}^{\zeta}=&\begin{bmatrix}
 0\\[5pt]
 0\\[5pt]
 1
@@ -1213,27 +1224,124 @@ r=\sqrt{x^{2}+y^{2}}\\
 \end{aligned}
 \end{equation}
 
+\newpage
+
 \item[Coordonn\'ees spheriques]
+
+\begin{equation}
+\begin{cases}
+x=r\sin{\theta}\cos{\varphi}\\
+y=r\sin{\theta}\sin{\varphi}\\
+z=r\cos{\theta}
+\end{cases}\longleftrightarrow\begin{cases}
+r=\sqrt{x^{2}+y^{2}+z^{2}}\\
+\varphi=\tan^{-1}\left(\frac{y}{x}\right)\\
+\theta=\tan^{-1}\left(\frac{\sqrt{x^{2}+y^{2}}}{z}\right)\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\frac{\partial r}{\partial x}&=\frac{1}{2}\frac{2x}{\sqrt{x^{2}+y^{2}+z^{2}}}=\\&=\frac{\cancel{r}\sin{\theta}\cos{\varphi}}{\cancel{r}}\\
+\frac{\partial r}{\partial y}&=\frac{1}{2}\frac{2y}{\sqrt{x^{2}+y^{2}+z^{2}}}=\\&=\frac{\cancel{r}\sin{\theta}\sin{\varphi}}{\cancel{r}}\\
+\frac{\partial r}{\partial z}&=\frac{1}{2}\frac{2z}{\sqrt{x^{2}+y^{2}+z^{2}}}=\\&=\frac{\cancel{r}\cos{\theta}}{\cancel{r}}\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial \varphi}{\partial x}&=-\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{y}{x^{2}}=\\&=-\frac{\sin{\varphi}}{r\sin{\theta}}\\
+\frac{\partial \varphi}{\partial y}&=\frac{1}{1+\left(\frac{y}{x}\right)^{2}}\frac{1}{x}=\\&=\frac{\cos{\varphi}}{r\sin{\theta}}\\
+\frac{\partial \varphi}{\partial z}&=0\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial \theta}{\partial x}&=\frac{1}{1+\left(\frac{\sqrt{x^{2}+y^{2}}}{z}\right)^{2}}\frac{\cancel{2}x}{\cancel{2}z\sqrt{x^{2}+y^{2}}}=\\&=\frac{1}{r}\cos{\theta}\cos{\varphi}\\
+\frac{\partial \theta}{\partial y}&=\frac{1}{1+\left(\frac{\sqrt{x^{2}+y^{2}}}{z}\right)^{2}}\frac{\cancel{2}y}{\cancel{2}z\sqrt{x^{2}+y^{2}}}=\\&=\frac{1}{r}\cos{\theta}\sin{\varphi}\\
+\frac{\partial \theta}{\partial z}&=-\frac{1}{1+\left(\frac{\sqrt{x^{2}+y^{2}}}{z}\right)^{2}}\frac{\sqrt{x^{2}+y^{2}}}{z^{2}}=\\&=-\frac{1}{r}\sin{\theta}\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\frac{\partial^{2} r}{\partial x^{2}}&=\cos{\theta}\cos{\varphi}\frac{\partial \theta}{\partial x}-\sin{\theta}\sin{\varphi}\frac{\partial\varphi}{\partial x}=\\&=\frac{1}{r}\left(\cos^{2}{\varphi}\cos^{2}{\theta}+\sin^{2}{\varphi}\right)\\
+\frac{\partial^{2} r}{\partial y^{2}}&=\cos{\theta}\sin{\varphi}\frac{\partial \theta}{\partial y}+\sin{\theta}\cos{\varphi}\frac{\partial\varphi}{\partial y}=\\&=\frac{1}{r}\left(\sin^{2}{\varphi}\cos^{2}{\theta}+\cos^{2}{\varphi}\right)\\
+\frac{\partial^{2} r}{\partial z^{2}}&=-\sin{\theta}\frac{\partial\theta}{\partial z}=\\&=\frac{1}{r}\sin^{2}{\theta}\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\frac{\partial^{2} \varphi}{\partial x^{2}}&=\frac{1}{r^{2}}\frac{\sin{\varphi}}{\sin{\theta}}\frac{\partial r}{\partial x}-\frac{1}{r}\frac{\cos{\varphi}}{\sin{\theta}}\frac{\partial\varphi}{\partial x}+\frac{1}{r}\frac{\sin{\varphi}}{\sin^{2}{\theta}}\cos{\theta}\frac{\partial\theta}{\partial x}=\\=&\frac{1}{r^{2}}\sin{\varphi}\cos{\varphi}+\frac{1}{r^{2}}\frac{\sin{\varphi}\cos{\varphi}}{\sin^{2}{\theta}}+\frac{1}{r^{2}}\frac{\sin{\varphi}\cos{\varphi}}{\tan^{2}{\theta}}\\
+\frac{\partial^{2} \varphi}{\partial y^{2}}&=-\frac{1}{r^{2}}\frac{\cos{\varphi}}{\sin{\theta}}\frac{\partial r}{\partial y}-\frac{1}{r}\frac{\sin{\varphi}}{\sin{\theta}}\frac{\partial\varphi}{\partial y}-\frac{1}{r}\frac{\cos{\varphi}}{\sin^{2}{\theta}}\cos{\theta}\frac{\partial\theta}{\partial y}=\\=&-\frac{1}{r^{2}}\sin{\varphi}\cos{\varphi}-\frac{1}{r^{2}}\frac{\sin{\varphi}\cos{\varphi}}{\sin^{2}{\theta}}-\frac{1}{r^{2}}\frac{\sin{\varphi}\cos{\varphi}}{\tan^{2}{\theta}}\\
+\frac{\partial^{2} \varphi}{\partial z^{2}}&=0\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\frac{\partial^{2} \theta}{\partial x^{2}}&=-\frac{1}{r^{2}}\cos{\varphi}\cos{\theta}\frac{\partial r}{\partial x}-\frac{1}{r}\sin{\varphi}\cos{\theta}\frac{\partial \varphi}{\partial x}-\frac{1}{r}\cos{\varphi}\sin{\theta}\frac{\partial \theta}{\partial x}=\\
+&=-\frac{2}{r^{2}}\cos^{2}{\varphi}\cos{\theta}\sin{\theta}+\frac{1}{r^{2}}\frac{\sin^{2}{\varphi}}{\tan{\theta}}\\
+\frac{\partial^{2} \theta}{\partial y^{2}}&=-\frac{1}{r^{2}}\sin{\varphi}\cos{\theta}\frac{\partial r}{\partial y}-\frac{1}{r}\sin{\varphi}\sin{\theta}\frac{\partial \varphi}{\partial y}+\frac{1}{r}\cos{\varphi}\cos{\theta}\frac{\partial \theta}{\partial y}=\\
+&=-\frac{2}{r^{2}}\sin^{2}{\varphi}\cos{\theta}\sin{\theta}+\frac{1}{r^{2}}\frac{\cos^{2}{\varphi}}{\tan{\theta}}\\
+\frac{\partial^{2}\theta}{\partial z^{2}}&=\frac{1}{r^{2}}\sin{\theta}\frac{\partial r}{\partial z}-\frac{1}{r}\cos{\theta}\frac{\partial\theta}{\partial z}=\\
+&=\frac{2}{r^{2}}\cos{\theta}\sin{\theta}
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\sqrt{\left(\frac{\partial r}{\partial x}\right)^{2}+\left(\frac{\partial r}{\partial y}\right)^{2}+\left(\frac{\partial r}{\partial z}\right)^{2}}=1\\
+\sqrt{\left(\frac{\partial\varphi}{\partial x}\right)^{2}+\left(\frac{\partial\varphi}{\partial y}\right)^{2}+\left(\frac{\partial\varphi}{\partial z}\right)^{2}}=\frac{1}{r\sin{\theta}}\\
+\sqrt{\left(\frac{\partial\theta}{\partial x}\right)^{2}+\left(\frac{\partial\theta}{\partial y}\right)^{2}+\left(\frac{\partial\theta}{\partial z}\right)^{2}}=\frac{1}{r}\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\mathbf{i}^{r}=&\begin{bmatrix}
+\sin{\theta}\cos{\varphi}\\[5pt]
+\sin{\theta}\sin{\varphi}\\[5pt]
+\cos{\theta}\end{bmatrix}\\
+\mathbf{j}^{\varphi}=&r\sin{\theta}\begin{bmatrix}
+-\frac{\sin{\varphi}}{r\sin{\theta}}\\[5pt]
+\frac{\cos{\varphi}}{r\sin{\theta}}\\[5pt]
+0\end{bmatrix}=\begin{bmatrix}
+-\sin{\varphi}\\[5pt]
+\cos{\varphi}\\[5pt]
+0\end{bmatrix}\\
+\mathbf{k}^{\theta}=&r\begin{bmatrix}
+\frac{1}{r}\cos{\theta}\cos{\varphi}\\[5pt]
+\frac{1}{r}\cos{\theta}\sin{\varphi}\\[5pt]
+-\frac{1}{r}\sin{\theta}
+\end{bmatrix}=\begin{bmatrix}
+\cos{\theta}\cos{\varphi}\\[5pt]
+\cos{\theta}\sin{\varphi}\\[5pt]
+-\sin{\theta}
+\end{bmatrix}
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\nabla_{r\varphi\theta} f=\begin{bmatrix}
+\frac{\partial f}{\partial r}\\[10pt]
+\frac{1}{r\sin{\theta}}\frac{\partial f}{\partial\varphi}\\[10pt]
+\frac{1}{r}\frac{\partial f}{\partial\theta}
+\end{bmatrix}
+\end{equation}
+
 \end{description}
 
 \cleardoublepageusingstyle{scrheadings}
 
-\clearscrheadings
-\pagestyle{scrheadings}
-\manualmark
-\ofoot{\\\pagemark} % ofoo
-\ifoot{} % ofoo
-%\cfoot[]{\pagemark}
-%\ihead{}
-%\ohead{}
-\ohead{Second section}
-\setheadtopline{2pt}
-\setheadsepline{0.5pt}
-\setfootsepline{0.5pt}
-
-\section{Second section}
-
-\cleardoublepageusingstyle{scrheadings}
+%\clearscrheadings
+%\pagestyle{scrheadings}
+%\manualmark
+%\ofoot{\\\pagemark} % ofoo
+%\ifoot{} % ofoo
+%%\cfoot[]{\pagemark}
+%%\ihead{}
+%%\ohead{}
+%\ohead{Second section}
+%\setheadtopline{2pt}
+%\setheadsepline{0.5pt}
+%\setfootsepline{0.5pt}
+%
+%\cleardoublepageusingstyle{scrheadings}
 
 %------------------------------------------------%
 %------------------------------------------------%
@@ -1241,26 +1349,26 @@ r=\sqrt{x^{2}+y^{2}}\\
 %------------------------------------------------%
 %------------------------------------------------%
 
-\begin{appendix}
-
-\clearscrheadings
-\pagestyle{scrheadings}
-\manualmark
-\ofoot{\\\pagemark} % ofoo
-\ifoot{} % ofoo
-%\cfoot[]{\pagemark}
-%\ihead{}
-%\ohead{}
-\ohead{Appendix A}
-\setheadtopline{2pt}
-\setheadsepline{0.5pt}
-\setfootsepline{0.5pt}
-
-\section{First appendix}
-
-\cleardoublepageusingstyle{scrheadings}
-%\cleardoublepage
-\end{appendix}
+%\begin{appendix}
+%
+%\clearscrheadings
+%\pagestyle{scrheadings}
+%\manualmark
+%\ofoot{\\\pagemark} % ofoo
+%\ifoot{} % ofoo
+%%\cfoot[]{\pagemark}
+%%\ihead{}
+%%\ohead{}
+%\ohead{Appendix A}
+%\setheadtopline{2pt}
+%\setheadsepline{0.5pt}
+%\setfootsepline{0.5pt}
+%
+%\section{First appendix}
+%
+%\cleardoublepageusingstyle{scrheadings}
+%%\cleardoublepage
+%\end{appendix}
 
 
 % References
