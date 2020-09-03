@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.11.20)  3 SEP 2020 17:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.11.20)  3 SEP 2020 17:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1175,14 +1175,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/ccicons/m/n' will be
 (Font)              scaled to size 28.79999pt on input line 211.
-<logo-eeigm-ht90.png, id=60, 660.4675pt x 90.3375pt>
+<logo-eeigm-ht90.png, id=8, 660.4675pt x 90.3375pt>
 File: logo-eeigm-ht90.png Graphic file (type png)
 <use logo-eeigm-ht90.png>
 Package pdftex.def Info: logo-eeigm-ht90.png  used on input line 231. on input 
 line 231.
 Package pdftex.def Info: Requested size: 260.03021pt x 35.56593pt on input line
  231.
-<label-logo-ul.png, id=62, 173.64874pt x 60.225pt>
+<label-logo-ul.png, id=10, 173.64874pt x 60.225pt>
 File: label-logo-ul.png Graphic file (type png)
 <use label-logo-ul.png>
 Package pdftex.def Info: label-logo-ul.png  used on input line 231. on input li
@@ -1212,15 +1212,17 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 254.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 15.55188pt on input line 254.
- (./td.toc)
+
+
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
 \tf@toc=\write5
 \openout5 = `td.toc'.
 
- [1] [2
+[1] [2
 
 
-]
-[3] [4
+] [3] [4
 
 
 ] [5] [6
@@ -1238,17 +1240,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.366 \newpage
+l.387 \newpage
                [1]
 Underfull \vbox (badness 2269) has occurred while \output is active []
 
  [2]
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 50
-1.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 52
+2.
 
 
-Overfull \hbox (29.2291pt too wide) detected at line 541
+Overfull \hbox (29.2291pt too wide) detected at line 562
   $[][]$  
  []
 
@@ -1256,7 +1258,7 @@ Overfull \hbox (29.2291pt too wide) detected at line 541
 Underfull \vbox (badness 4303) has occurred while \output is active []
 
  [4]
-Overfull \hbox (27.83734pt too wide) detected at line 705
+Overfull \hbox (27.83734pt too wide) detected at line 726
   $[][]$  
  []
 
@@ -1275,7 +1277,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
 [10]
-Overfull \hbox (12.50157pt too wide) detected at line 975
+Overfull \hbox (12.50157pt too wide) detected at line 996
   $[]  []  []$  
  []
 
@@ -1311,28 +1313,35 @@ Class scrartcl Warning: You are using `\begin{appendix}...\end{appendix}'.
 (scrartcl)              inconsistent.
 (scrartcl)              Because of this, you should remove `\end{appendix}'
 (scrartcl)              and replace `\begin{appendix}' by command
-(scrartcl)              `\appendix' on input line 1210.
+(scrartcl)              `\appendix' on input line 1231.
 
 [19] [20
 
 
 ]
 No file td.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1252.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1252.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1273.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1273.
 (./td.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1252.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1252.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1273.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1273.
 
-Package rerunfilecheck Info: File `td.out' has not changed.
-(rerunfilecheck)             Checksum: FE49702DEB74D7379EDC524806C3455A;806.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1252.
+
+
+Package rerunfilecheck Warning: File `td.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `td.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  35FF9EF6A3857A1289C2D10C0C123D90;879.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1273.
  ) 
 Here is how much of TeX's memory you used:
- 33015 strings out of 492985
- 750267 string characters out of 6136283
+ 32996 strings out of 492985
+ 749912 string characters out of 6136283
  1038189 words of memory out of 5000000
- 35870 multiletter control sequences out of 15000+600000
+ 35850 multiletter control sequences out of 15000+600000
  34733 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,24n,108p,8857b,974s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1362,10 +1371,10 @@ c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive
 f-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2017/texmf-dist/fon
 ts/type1/public/cm-super/sfxc1728.pfb><c:/texlive/2017/texmf-dist/fonts/type1/u
 rw/helvetic/uhvb8a.pfb>
-Output written on td.pdf (29 pages, 351885 bytes).
+Output written on td.pdf (29 pages, 350128 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 338 compressed objects within 4 object streams
- 107 named destinations out of 1000 (max. 500000)
- 127 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 290 compressed objects within 3 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
