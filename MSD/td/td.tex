@@ -370,8 +370,76 @@ Exprimer l'op\'erateur laplacien $\nabla^{2}$ en
 \begin{equation}
 \begin{cases}
 x=x\left(\xi,\eta,\zeta\right)\\
-y=x\left(\xi,\eta,\zeta\right)\\
-z=x\left(\xi,\eta,\zeta\right)
+y=y\left(\xi,\eta,\zeta\right)\\
+z=z\left(\xi,\eta,\zeta\right)
+\end{cases}\longleftrightarrow\begin{cases}
+\xi=\xi\left(x,y,z\right)\\
+\eta=\eta\left(x,y,z\right)\\
+\zeta=\zeta\left(x,y,z\right)
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\mathbf{r}=\begin{bmatrix}
+x\\
+y\\
+z\\
+\end{bmatrix}=\begin{bmatrix}
+\xi\\
+\eta\\
+\zeta\\
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+d\mathbf{r}=\begin{bmatrix}
+dx\\
+dy\\
+dz\\
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+dx=\frac{\partial x}{\partial\xi}d \xi+\frac{\partial x}{\partial\eta}d \eta+\frac{\partial x}{\partial\zeta}d \zeta\\
+dy=\frac{\partial y}{\partial\xi}d \xi+\frac{\partial y}{\partial\eta}d \eta+\frac{\partial y}{\partial\zeta}d \zeta\\
+dz=\frac{\partial z}{\partial\xi}d \xi+\frac{\partial z}{\partial\eta}d \eta+\frac{\partial z}{\partial\zeta}d \zeta\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+d\mathbf{r}=\begin{bmatrix}
+dx\\
+dy\\
+dz\\
+\end{bmatrix}=\underbrace{\begin{bmatrix}
+\frac{\partial x}{\partial\xi}&\frac{\partial x}{\partial\eta}&\frac{\partial x}{\partial\zeta}\\
+\frac{\partial y}{\partial\xi}&\frac{\partial y}{\partial\eta}&\frac{\partial y}{\partial\zeta}\\
+\frac{\partial z}{\partial\xi}&\frac{\partial z}{\partial\eta}&\frac{\partial z}{\partial\zeta}\\
+\end{bmatrix}}_{\mathbf{J}}\begin{bmatrix}
+d\xi\\
+d\eta\\
+d\zeta\\
+\end{bmatrix}=\mathbf{J}\begin{bmatrix}
+d\xi\\
+d\eta\\
+d\zeta\\
+\end{bmatrix}
+\end{equation}
+
+\end{description}
+
+\subsubsection{Probl\`eme B}
+
+\begin{description}
+
+\item[Rappels th\'eoriques]
+
+\begin{equation}
+\begin{cases}
+x=x\left(\xi,\eta,\zeta\right)\\
+y=y\left(\xi,\eta,\zeta\right)\\
+z=z\left(\xi,\eta,\zeta\right)
 \end{cases}\longleftrightarrow\begin{cases}
 \xi=\xi\left(x,y,z\right)\\
 \eta=\eta\left(x,y,z\right)\\
@@ -616,7 +684,7 @@ r=\sqrt{x^{2}+y^{2}+z^{2}}\\
 
 \end{description}
 
-\subsubsection{Probl\`eme B}
+\subsubsection{Probl\`eme C}
 
 \begin{equation}
 \begin{cases}
