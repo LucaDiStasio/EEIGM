@@ -8,3 +8,6 @@
 \contentsline {subsubsection}{\numberline {1.2.1}Probl\`eme A}{2}{subsubsection.1.2.1}
 \contentsline {subsubsection}{\numberline {1.2.2}Probl\`eme B}{7}{subsubsection.1.2.2}
 \contentsline {subsubsection}{\numberline {1.2.3}Probl\`eme C}{14}{subsubsection.1.2.3}
+\contentsline {section}{\numberline {2}D\'eplacement et mesures de d\'eformation}{21}{section.2}
+\contentsline {subsection}{\numberline {2.1}\'Enonc\'e}{21}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Corrig\'e}{22}{subsection.2.2}
