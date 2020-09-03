@@ -18,6 +18,7 @@ fleqn,                        % equations are aligned on the left side, comment 
 %\usepackage[french]{babel}	   % french					
 %\usepackage[ngerman]{babel}   % german
 \usepackage[T1]{fontenc}      % enables "Umlaute" (not really needed for English)
+%\usepackage{lmodern}
 \usepackage[scaled=.90]{helvet}
 %----------------------
 % Creative Commons License
@@ -215,7 +216,7 @@ Cette oeuvre est mise \`a disposition selon les termes de la\\ \href{https://cre
 \vspace*{3cm}
 
 
-{\large \textbf{6 ao\^ut 2020}}\\
+{\large \textbf{\today}}\\
 %\textsc{DEFENSE LOCATION}\\
 
 %------------------------------------------------
@@ -910,6 +911,8 @@ f\left(\xi,\eta,\zeta\right)=f\left(\xi\left(x,y,z\right),\eta\left(x,y,z\right)
 \end{aligned}
 \end{equation}
 
+\newpage
+
 \item[Coordonn\'ees cylindriques]
 
 \begin{equation}
@@ -965,6 +968,8 @@ r=\sqrt{x^{2}+y^{2}}\\
 \end{aligned}
 \end{equation}
 
+\newpage
+
 \item[Coordonn\'ees spheriques]
 
 \begin{equation}
@@ -1014,15 +1019,21 @@ r=\sqrt{x^{2}+y^{2}+z^{2}}\\
 \begin{equation}
 \begin{cases}
 \frac{\partial^{2} \theta}{\partial x^{2}}&=-\frac{1}{r^{2}}\cos{\varphi}\cos{\theta}\frac{\partial r}{\partial x}-\frac{1}{r}\sin{\varphi}\cos{\theta}\frac{\partial \varphi}{\partial x}-\frac{1}{r}\cos{\varphi}\sin{\theta}\frac{\partial \theta}{\partial x}=\\
-&=-\frac{2}{r^{2}}\cos^{2}{\varphi}\cos{\theta}\sin{\theta}+\frac{1}{r^{2}}\frac{\sin^{2}{\theta}}{\tan{\theta}}\\
-\frac{\partial^{2} \varphi}{\partial y^{2}}&=-\frac{1}{r^{2}}\sin{\varphi}\cos{\theta}\frac{\partial r}{\partial y}-\frac{1}{r}\sin{\varphi}\sin{\theta}\frac{\partial \varphi}{\partial y}+\frac{1}{r}\cos{\varphi}\cos{\theta}\frac{\partial \theta}{\partial y}=\\
+&=-\frac{2}{r^{2}}\cos^{2}{\varphi}\cos{\theta}\sin{\theta}+\frac{1}{r^{2}}\frac{\sin^{2}{\varphi}}{\tan{\theta}}\\
+\frac{\partial^{2} \theta}{\partial y^{2}}&=-\frac{1}{r^{2}}\sin{\varphi}\cos{\theta}\frac{\partial r}{\partial y}-\frac{1}{r}\sin{\varphi}\sin{\theta}\frac{\partial \varphi}{\partial y}+\frac{1}{r}\cos{\varphi}\cos{\theta}\frac{\partial \theta}{\partial y}=\\
 &=-\frac{2}{r^{2}}\sin^{2}{\varphi}\cos{\theta}\sin{\theta}+\frac{1}{r^{2}}\frac{\cos^{2}{\varphi}}{\tan{\theta}}\\
 \frac{\partial^{2}\theta}{\partial z^{2}}&=\frac{1}{r^{2}}\sin{\theta}\frac{\partial r}{\partial z}-\frac{1}{r}\cos{\theta}\frac{\partial\theta}{\partial z}=\\
 &=\frac{2}{r^{2}}\cos{\theta}\sin{\theta}
 \end{cases}
 \end{equation}
 
+\begin{equation}
+\nabla_{r\varphi\theta}^{2}f\left(\xi,\eta,\zeta\right)=\frac{\partial^{2} f}{\partial r^{2}}+\frac{1}{r^{2}\sin^{2}{\theta}}\frac{\partial^{2} f}{\partial\varphi^{2}}+\frac{1}{r^{2}}\frac{\partial^{2} f}{\partial\theta^{2}}+\frac{2}{r}\frac{\partial f}{\partial r}+\frac{2}{r^{2}\tan{\theta}}\frac{\partial f}{\partial\theta}
+\end{equation}
+
 \end{description}
+
+\newpage
 
 \subsubsection{Probl\`eme C}
 
@@ -1063,7 +1074,7 @@ f\left(\xi,\eta,\zeta\right)=f\left(\xi\left(x,y,z\right),\eta\left(x,y,z\right)
 0\\[5pt]
 0\\[5pt]
 1
-\end{bmatrix}=\frac{\partial f}{\partial x}\mathbf{i}_{x}+\frac{\partial f}{\partial y}\mathbf{j}_{y}+\frac{\partial f}{\partial z}\mathbf{k}_{z}
+\end{bmatrix}=\frac{\partial f}{\partial x}\mathbf{i}^{x}+\frac{\partial f}{\partial y}\mathbf{j}^{y}+\frac{\partial f}{\partial z}\mathbf{k}^{z}
 \end{equation}
 
 \begin{equation}
@@ -1090,13 +1101,15 @@ f\left(\xi,\eta,\zeta\right)=f\left(\xi\left(x,y,z\right),\eta\left(x,y,z\right)
 
 \begin{equation}
 \begin{aligned}
-\mathbf{i}_{\xi}=&\frac{1}{\sqrt{\left(\frac{\partial\xi}{\partial x}\right)^{2}+\left(\frac{\partial\xi}{\partial y}\right)^{2}+\left(\frac{\partial\xi}{\partial z}\right)^{2}}}\begin{bmatrix}
+\mathbf{i}^{\xi}=&\frac{1}{\sqrt{\left(\frac{\partial\xi}{\partial x}\right)^{2}+\left(\frac{\partial\xi}{\partial y}\right)^{2}+\left(\frac{\partial\xi}{\partial z}\right)^{2}}}\begin{bmatrix}
 \frac{\partial\xi}{\partial x}\\[5pt]
 \frac{\partial\xi}{\partial y}\\[5pt]
-\frac{\partial\xi}{\partial z}\end{bmatrix}\\\mathbf{j}_{\eta}=&\frac{1}{\sqrt{\left(\frac{\partial\eta}{\partial x}\right)^{2}+\left(\frac{\partial\eta}{\partial y}\right)^{2}+\left(\frac{\partial\eta}{\partial z}\right)^{2}}}\begin{bmatrix}
+\frac{\partial\xi}{\partial z}\end{bmatrix}\\
+\mathbf{j}^{\eta}=&\frac{1}{\sqrt{\left(\frac{\partial\eta}{\partial x}\right)^{2}+\left(\frac{\partial\eta}{\partial y}\right)^{2}+\left(\frac{\partial\eta}{\partial z}\right)^{2}}}\begin{bmatrix}
 \frac{\partial\eta}{\partial x}\\[5pt]
 \frac{\partial\eta}{\partial y}\\[5pt]
-\frac{\partial\eta}{\partial z}\end{bmatrix}\\\mathbf{k}_{\zeta}=&\frac{1}{\sqrt{\left(\frac{\partial\zeta}{\partial x}\right)^{2}+\left(\frac{\partial\zeta}{\partial y}\right)^{2}+\left(\frac{\partial\zeta}{\partial z}\right)^{2}}}\begin{bmatrix}
+\frac{\partial\eta}{\partial z}\end{bmatrix}\\
+\mathbf{k}^{\zeta}=&\frac{1}{\sqrt{\left(\frac{\partial\zeta}{\partial x}\right)^{2}+\left(\frac{\partial\zeta}{\partial y}\right)^{2}+\left(\frac{\partial\zeta}{\partial z}\right)^{2}}}\begin{bmatrix}
 \frac{\partial\zeta}{\partial x}\\[5pt]
 \frac{\partial\zeta}{\partial y}\\[5pt]
 \frac{\partial\zeta}{\partial z}
