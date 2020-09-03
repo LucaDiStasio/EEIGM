@@ -29,7 +29,8 @@ fleqn,                        % equations are aligned on the left side, comment 
 \usepackage{float}            		% Option [H] for fixing floats where you want them to be (not recommended unless you really need it)
 \usepackage{tikz}
 \usetikzlibrary{matrix,decorations.pathreplacing, calc, positioning,fit}
-\usepackage{pgfplots}    
+\usepackage{pgfplots} 
+\usepackage{xcolor}    
 %------------------------------
 % math packages
 \usepackage[cmex10]{amsmath}  
@@ -362,6 +363,8 @@ Exprimer l'op\'erateur laplacien $\nabla^{2}$ en
 
 \subsubsection{Probl\`eme B}
 
+\newpage
+
 \subsection{Corrig\'e}
 
 \subsubsection{Probl\`eme A}
@@ -433,17 +436,325 @@ d\zeta\\
 \tikzset{node style ge/.style={circle}}
 
 \begin{center}
+\begin{tabular}{ccc}
 \begin{tikzpicture}
-\matrix (A) [matrix of math nodes, nodes = {node style ge},column sep=0 mm] 
+\matrix (A) [matrix of math nodes,left delimiter={[},right delimiter={]}] 
 { \frac{\partial x}{\partial\xi}&\frac{\partial x}{\partial\eta}&\frac{\partial x}{\partial\zeta}\\
 \frac{\partial y}{\partial\xi}&\frac{\partial y}{\partial\eta}&\frac{\partial y}{\partial\zeta}\\
 \frac{\partial z}{\partial\xi}&\frac{\partial z}{\partial\eta}&\frac{\partial z}{\partial\zeta}\\
 };
+\draw [blue!50!black,fill=blue!10!white,fill opacity =0.25] (A-1-1.north east) to (A-3-1.south east) to (A-3-1.south west) to (A-1-1.north west) to (A-1-1.north east);
 \end{tikzpicture}
+&
+\begin{tikzpicture}
+\matrix (A) [matrix of math nodes,left delimiter={[},right delimiter={]}] 
+{ \frac{\partial x}{\partial\xi}&\frac{\partial x}{\partial\eta}&\frac{\partial x}{\partial\zeta}\\
+\frac{\partial y}{\partial\xi}&\frac{\partial y}{\partial\eta}&\frac{\partial y}{\partial\zeta}\\
+\frac{\partial z}{\partial\xi}&\frac{\partial z}{\partial\eta}&\frac{\partial z}{\partial\zeta}\\
+};
+\draw [green!30!black,fill=green!10!white,fill opacity =0.25] (A-1-2.north east) to (A-3-2.south east) to (A-3-2.south west) to (A-1-2.north west) to (A-1-2.north east);
+\end{tikzpicture}
+&
+\begin{tikzpicture}
+\matrix (A) [matrix of math nodes,left delimiter={[},right delimiter={]}] 
+{ \frac{\partial x}{\partial\xi}&\frac{\partial x}{\partial\eta}&\frac{\partial x}{\partial\zeta}\\
+\frac{\partial y}{\partial\xi}&\frac{\partial y}{\partial\eta}&\frac{\partial y}{\partial\zeta}\\
+\frac{\partial z}{\partial\xi}&\frac{\partial z}{\partial\eta}&\frac{\partial z}{\partial\zeta}\\
+};
+\draw [purple!50!black,fill=purple!10!white,fill opacity =0.25] (A-1-3.north east) to (A-3-3.south east) to (A-3-3.south west) to (A-1-3.north west) to (A-1-3.north east);
+\end{tikzpicture}
+\\
+$\color{blue!50!black} \frac{\partial \mathbf{r}}{\partial\xi}$&$\color{green!30!black} \frac{\partial \mathbf{r}}{\partial\eta}$&$\color{purple!50!black} \frac{\partial \mathbf{r}}{\partial\zeta}$\\
+\end{tabular}
 \end{center}
 
+\begin{equation}
+\begin{aligned}
+\mathbf{i}_{\xi}=&\frac{1}{\lvert\lvert\frac{\partial \mathbf{r}}{\partial\xi}\rvert\rvert}\frac{\partial \mathbf{r}}{\partial\xi}=\frac{1}{\sqrt{\left(\frac{\partial x}{\partial\xi}\right)^{2}+\left(\frac{\partial y}{\partial\xi}\right)^{2}+\left(\frac{\partial z}{\partial\xi}\right)^{2}}}\begin{bmatrix}
+\frac{\partial x}{\partial\xi}\\[5pt]
+\frac{\partial y}{\partial\xi}\\[5pt]
+\frac{\partial z}{\partial\xi}\end{bmatrix}\\
+\mathbf{j}_{\eta}=&\frac{1}{\lvert\lvert\frac{\partial \mathbf{r}}{\partial\eta}\rvert\rvert}\frac{\partial \mathbf{r}}{\partial\eta}=\frac{1}{\sqrt{\left(\frac{\partial x}{\partial\eta}\right)^{2}+\left(\frac{\partial y}{\partial\eta}\right)^{2}+\left(\frac{\partial z}{\partial\eta}\right)^{2}}}\begin{bmatrix}
+\frac{\partial x}{\partial\eta}\\[5pt]
+\frac{\partial y}{\partial\eta}\\[5pt]
+\frac{\partial z}{\partial\eta}\end{bmatrix}\\
+\mathbf{k}_{\zeta}=&\frac{1}{\lvert\lvert\frac{\partial \mathbf{r}}{\partial\zeta}\rvert\rvert}\frac{\partial \mathbf{r}}{\partial\zeta}=\frac{1}{\sqrt{\left(\frac{\partial x}{\partial\zeta}\right)^{2}+\left(\frac{\partial y}{\partial\zeta}\right)^{2}+\left(\frac{\partial z}{\partial\zeta}\right)^{2}}}\begin{bmatrix}
+\frac{\partial x}{\partial\zeta}\\[5pt]
+\frac{\partial y}{\partial\zeta}\\[5pt]
+\frac{\partial z}{\partial\zeta}\end{bmatrix}
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+dl^{2}=d\mathbf{r}^{T}d\mathbf{r}=\begin{bmatrix}
+dx&
+dy&
+dz\\
+\end{bmatrix}\begin{bmatrix}
+dx\\
+dy\\
+dz\\
+\end{bmatrix}=dx^{2}+dy^{2}+dz^{2}
+\end{equation}
+
+\begin{equation}
+\footnotesize
+\begin{aligned}
+dl^{2}&=d\mathbf{r}^{T}d\mathbf{r}=\begin{bmatrix}
+d\xi&
+d\eta&
+d\zeta\\
+\end{bmatrix}\mathbf{J}^{T}\mathbf{J}\begin{bmatrix}
+d\xi\\
+d\eta\\
+d\zeta\\
+\end{bmatrix}=\\&=\begin{bmatrix}
+d\xi&
+d\eta&
+d\zeta\\
+\end{bmatrix}\begin{bmatrix}
+\frac{\partial x}{\partial\xi}&\frac{\partial y}{\partial\xi}&\frac{\partial z}{\partial\xi}\\
+\frac{\partial x}{\partial\eta}&\frac{\partial y}{\partial\eta}&\frac{\partial z}{\partial\eta}\\
+\frac{\partial x}{\partial\zeta}&\frac{\partial y}{\partial\zeta}&\frac{\partial z}{\partial\zeta}\\
+\end{bmatrix}\begin{bmatrix}
+\frac{\partial x}{\partial\xi}&\frac{\partial x}{\partial\eta}&\frac{\partial x}{\partial\zeta}\\
+\frac{\partial y}{\partial\xi}&\frac{\partial y}{\partial\eta}&\frac{\partial y}{\partial\zeta}\\
+\frac{\partial z}{\partial\xi}&\frac{\partial z}{\partial\eta}&\frac{\partial z}{\partial\zeta}\\
+\end{bmatrix}\begin{bmatrix}
+d\xi\\
+d\eta\\
+d\zeta\\
+\end{bmatrix}=\\&=\begin{bmatrix}
+d\xi&
+d\eta&
+d\zeta\\
+\end{bmatrix}\underbrace{\begin{bmatrix}
+\left(\frac{\partial x}{\partial\xi}\right)^{2}+\left(\frac{\partial y}{\partial\xi}\right)^{2}+\left(\frac{\partial z}{\partial\xi}\right)^{2}&\frac{\partial x}{\partial\xi}\frac{\partial x}{\partial\eta}+\frac{\partial y}{\partial\xi}\frac{\partial y}{\partial\eta}+\frac{\partial z}{\partial\xi}\frac{\partial z}{\partial\eta}&\frac{\partial x}{\partial\xi}\frac{\partial x}{\partial\zeta}+\frac{\partial y}{\partial\xi}\frac{\partial y}{\partial\zeta}+\frac{\partial z}{\partial\xi}\frac{\partial z}{\partial\zeta}\\
+\frac{\partial x}{\partial\xi}\frac{\partial x}{\partial\eta}+\frac{\partial y}{\partial\xi}\frac{\partial y}{\partial\eta}+\frac{\partial z}{\partial\xi}\frac{\partial z}{\partial\eta}&\left(\frac{\partial x}{\partial\eta}\right)^{2}+\left(\frac{\partial y}{\partial\eta}\right)^{2}+\left(\frac{\partial z}{\partial\eta}\right)^{2}&\frac{\partial x}{\partial\eta}\frac{\partial x}{\partial\zeta}+\frac{\partial y}{\partial\eta}\frac{\partial y}{\partial\zeta}+\frac{\partial z}{\partial\eta}\frac{\partial z}{\partial\zeta}\\
+\frac{\partial x}{\partial\xi}\frac{\partial x}{\partial\zeta}+\frac{\partial y}{\partial\xi}\frac{\partial y}{\partial\zeta}+\frac{\partial z}{\partial\xi}\frac{\partial z}{\partial\zeta}&\frac{\partial x}{\partial\eta}\frac{\partial x}{\partial\zeta}+\frac{\partial y}{\partial\eta}\frac{\partial y}{\partial\zeta}+\frac{\partial z}{\partial\eta}\frac{\partial z}{\partial\zeta}&\left(\frac{\partial x}{\partial\zeta}\right)^{2}+\left(\frac{\partial y}{\partial\zeta}\right)^{2}+\left(\frac{\partial z}{\partial\zeta}\right)^{2}\\
+\end{bmatrix}}_{\mathbf{g}}\begin{bmatrix}
+d\xi\\
+d\eta\\
+d\zeta\\
+\end{bmatrix}
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+dV=\frac{\partial \mathbf{r}}{\partial\xi}d\xi\cdot\left(\frac{\partial \mathbf{r}}{\partial\eta}d\eta\wedge\frac{\partial \mathbf{r}}{\partial\zeta}d\zeta\right)=det\begin{bmatrix}
+\left(\frac{\partial \mathbf{r}}{\partial\xi}\right)^{T}\\
+\left(\frac{\partial \mathbf{r}}{\partial\eta}\right)^{T}\\
+\left(\frac{\partial \mathbf{r}}{\partial\zeta}\right)^{T}\\
+\end{bmatrix}d\xi d\eta d\zeta=det\left(\mathbf{J}^{T}\right)d\xi d\eta d\zeta
+\end{equation}
+
+\newpage
+
+\item[Coordonn\'ees cylindriques]
+
+\begin{equation}
+\begin{cases}
+x=r\cos{\theta}\\
+y=r\sin{\theta}\\
+z=\tilde{z}
+\end{cases}\longleftrightarrow\begin{cases}
+r=\sqrt{x^{2}+y^{2}}\\
+\theta=\tan^{-1}\left(\frac{y}{x}\right)\\
+\tilde{z}=z
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\frac{\partial x}{\partial r}&=\cos{\theta}\\
+\frac{\partial x}{\partial \theta}&=-r\sin{\theta}\\
+\frac{\partial x}{\partial \tilde{z}}&=0\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial y}{\partial r}&=\sin{\theta}\\
+\frac{\partial y}{\partial \theta}&=r\cos{\theta}\\
+\frac{\partial y}{\partial \tilde{z}}&=0\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial z}{\partial r}&=0\\
+\frac{\partial z}{\partial \theta}&=0\\
+\frac{\partial z}{\partial \tilde{z}}&=1\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\mathbf{i}_{r}=&\frac{1}{\lvert\lvert\frac{\partial \mathbf{r}}{\partial r}\rvert\rvert}\frac{\partial \mathbf{r}}{\partial r}=\frac{1}{\sqrt{\sin^{2}{\theta}+\cos^{2}{\theta}}}\begin{bmatrix}
+\cos{\theta}\\[5pt]
+\sin{\theta}\\[5pt]
+0\end{bmatrix}=\begin{bmatrix}
+\cos{\theta}\\[5pt]
+\sin{\theta}\\[5pt]
+0\end{bmatrix}\\
+\mathbf{j}_{\theta}=&\frac{1}{\lvert\lvert\frac{\partial \mathbf{r}}{\partial\theta}\rvert\rvert}\frac{\partial \mathbf{r}}{\partial\theta}=\frac{1}{\sqrt{r^{2}\sin^{2}{\theta}+r^{2}\cos^{2}{\theta}}}\begin{bmatrix}
+-r\sin{\theta}\\[5pt]
+r\cos{\theta}\\[5pt]
+0\end{bmatrix}=\begin{bmatrix}
+-\sin{\theta}\\[5pt]
+\cos{\theta}\\[5pt]
+0\end{bmatrix}\\
+\mathbf{k}_{\tilde{z}}=&\frac{1}{\lvert\lvert\frac{\partial \mathbf{r}}{\partial\tilde{z}}\rvert\rvert}\frac{\partial \mathbf{r}}{\partial\tilde{z}}=\begin{bmatrix}
+0\\[5pt]
+0\\[5pt]
+1\end{bmatrix}
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\mathbf{J}=\begin{bmatrix}
+\cos{\theta}&-r\sin{\theta}&0\\
+\sin{\theta}&r\cos{\theta}&0\\
+0&0&1\\
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+d\mathbf{r}=\begin{bmatrix}
+\cos{\theta}\\
+\sin{\theta}\\
+0\\
+\end{bmatrix}dr+\begin{bmatrix}
+-r\sin{\theta}\\
+r\cos{\theta}\\
+0\\
+\end{bmatrix}d\theta+\begin{bmatrix}
+0\\
+0\\
+1\\
+\end{bmatrix}d\tilde{z}=dr\mathbf{i}_{r}+rd\theta\mathbf{i}_{\theta}+d\tilde{z}\mathbf{i}_{\tilde{z}}=\begin{bmatrix}
+dr\\
+rd\theta\\
+d\tilde{z}\\
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+\mathbf{g}=
+\begin{bmatrix}
+1&0&0\\
+0&r^{2}&0\\
+0&0&1\\
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+dl^{2}=dr^{2}+r^{2}d\theta^{2}+d\tilde{z}^{2}
+\end{equation}
+
+\begin{equation}
+dV=det\left(\mathbf{J}^{T}\right)drd\theta d\tilde{z}=rdrd\theta d\tilde{z}
+\end{equation}
+
+\item[Coordonn\'ees spheriques]
+
+\begin{equation}
+\begin{cases}
+x=r\sin{\theta}\cos{\varphi}\\
+y=r\sin{\theta}\sin{\varphi}\\
+z=r\cos{\theta}
+\end{cases}\longleftrightarrow\begin{cases}
+r=\sqrt{x^{2}+y^{2}+z^{2}}\\
+\varphi=\tan^{-1}\left(\frac{y}{x}\right)\\
+\theta=\tan^{-1}\left(\frac{\sqrt{x^{2}+y^{2}}}{z}\right)\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\frac{\partial x}{\partial r}&=\sin{\theta}\cos{\varphi}\\
+\frac{\partial x}{\partial \theta}&=r\cos{\theta}\cos{\varphi}\\
+\frac{\partial x}{\partial \varphi}&=-r\sin{\theta}\sin{\varphi}\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial y}{\partial r}&=\sin{\theta}\sin{\varphi}\\
+\frac{\partial y}{\partial \theta}&=r\cos{\theta}\sin{\varphi}\\
+\frac{\partial y}{\partial \varphi}&=r\sin{\theta}\cos{\varphi}\\
+\end{cases}\qquad\begin{cases}
+\frac{\partial z}{\partial r}&=\cos{\theta}\\
+\frac{\partial z}{\partial \theta}&=-r\sin{\theta}\\
+\frac{\partial z}{\partial \varphi}&=0\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\mathbf{i}_{r}=&\frac{1}{\lvert\lvert\frac{\partial \mathbf{r}}{\partial r}\rvert\rvert}\frac{\partial \mathbf{r}}{\partial r}=\frac{1}{\sqrt{\sin^{2}{\theta}\cos^{2}{\varphi}+\sin^{2}{\theta}\sin^{2}{\varphi}+\cos^{2}{\theta}}}\begin{bmatrix}
+\sin{\theta}\cos{\varphi}\\[5pt]
+\sin{\theta}\sin{\varphi}\\[5pt]
+\cos{\theta}\end{bmatrix}=\begin{bmatrix}
+\sin{\theta}\cos{\varphi}\\[5pt]
+\sin{\theta}\sin{\varphi}\\[5pt]
+\cos{\theta}\end{bmatrix}\\
+\mathbf{j}_{\varphi}=&\frac{1}{\lvert\lvert\frac{\partial \mathbf{r}}{\partial\varphi}\rvert\rvert}\frac{\partial \mathbf{r}}{\partial\varphi}=\frac{1}{\sqrt{r^{2}\sin^{2}{\theta}\sin^{2}{\varphi}+r^{2}\sin^{2}{\theta}\cos^{2}{\varphi}}}\begin{bmatrix}
+-r\sin{\theta}\sin{\varphi}\\[5pt]
+r\sin{\theta}\cos{\varphi}\\[5pt]
+0\end{bmatrix}=\begin{bmatrix}
+-\sin{\varphi}\\[5pt]
+\cos{\varphi}\\[5pt]
+0\end{bmatrix}\\
+\mathbf{k}_{\theta}=&\frac{1}{\lvert\lvert\frac{\partial \mathbf{r}}{\partial\theta}\rvert\rvert}\frac{\partial \mathbf{r}}{\partial\theta}=\frac{1}{\sqrt{r^{2}\cos^{2}{\theta}\cos^{2}{\varphi}+r^{2}\cos^{2}{\theta}\sin^{2}{\varphi}+r^{2}\sin^{2}{\theta}}}\begin{bmatrix}
+r\cos{\theta}\cos{\varphi}\\[5pt]
+r\cos{\theta}\sin{\varphi}\\[5pt]
+-r\sin{\theta}\end{bmatrix}=\begin{bmatrix}
+\cos{\theta}\cos{\varphi}\\[5pt]
+\cos{\theta}\sin{\varphi}\\[5pt]
+-\sin{\theta}\end{bmatrix}\\
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\mathbf{J}=\begin{bmatrix}
+\sin{\theta}\cos{\varphi}&-r\sin{\theta}\sin{\varphi}&r\cos{\theta}\cos{\varphi}\\
+\sin{\theta}\sin{\varphi}&r\sin{\theta}\cos{\varphi}&r\cos{\theta}\sin{\varphi}\\
+\cos{\theta}&0&-r\sin{\theta}\\
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+d\mathbf{r}&=\begin{bmatrix}
+\sin{\theta}\cos{\varphi}\\
+\sin{\theta}\sin{\varphi}\\
+\cos{\theta}\\
+\end{bmatrix}dr+r\sin{\theta}\begin{bmatrix}
+-\sin{\varphi}\\
+\cos{\varphi}\\
+0\\
+\end{bmatrix}d\varphi+r\begin{bmatrix}
+\cos{\theta}\cos{\varphi}\\
+\cos{\theta}\sin{\varphi}\\
+-\sin{\theta}\\
+\end{bmatrix}d\theta=\\
+&=dr\mathbf{i}_{r}+r\sin{\theta}d\varphi\mathbf{j}_{\varphi}+rd\theta\mathbf{k}_{\theta}=\begin{bmatrix}
+dr\\
+r\sin{\theta}d\varphi\\
+rd\theta\\
+\end{bmatrix}
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\mathbf{g}=
+\begin{bmatrix}
+1&0&0\\
+0&r^{2}\sin^{2}{\theta}&0\\
+0&0&r^{2}\\
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+dl^{2}=dr^{2}+r^{2}\sin^{2}{\theta}d\varphi^{2}+r^{2}d\theta^{2}
+\end{equation}
+
+\begin{equation}
+dV=det\left(\mathbf{J}^{T}\right)drd\theta d\tilde{z}=r^{2}\sin{\theta}drd\varphi d\theta
+\end{equation}
 
 \end{description}
+
+\newpage
 
 \subsubsection{Probl\`eme B}
 
@@ -687,14 +998,6 @@ r=\sqrt{x^{2}+y^{2}+z^{2}}\\
 &=-\frac{2}{r^{2}}\sin^{2}{\varphi}\cos{\theta}\sin{\theta}+\frac{1}{r^{2}}\frac{\cos^{2}{\varphi}}{\tan{\theta}}\\
 \frac{\partial^{2}\theta}{\partial z^{2}}&=\frac{1}{r^{2}}\sin{\theta}\frac{\partial r}{\partial z}-\frac{1}{r}\cos{\theta}\frac{\partial\theta}{\partial z}=\\
 &=\frac{2}{r^{2}}\cos{\theta}\sin{\theta}
-\end{cases}
-\end{equation}
-
-\begin{equation}
-\begin{cases}
-\frac{\partial^{2} \varphi}{\partial x^{2}}&=0\\&\\
-\frac{\partial^{2} \varphi}{\partial y^{2}}&=0\\&\\
-\frac{\partial^{2} \varphi}{\partial z^{2}}&=0\\
 \end{cases}
 \end{equation}
 
