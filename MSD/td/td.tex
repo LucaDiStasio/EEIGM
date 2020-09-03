@@ -27,6 +27,9 @@ fleqn,                        % equations are aligned on the left side, comment 
 \usepackage{graphicx}         	% package to include graphics (pdf, png, jpg)
 \usepackage{subfig}			% package for subfigures
 \usepackage{float}            		% Option [H] for fixing floats where you want them to be (not recommended unless you really need it)
+\usepackage{tikz}
+\usetikzlibrary{matrix,decorations.pathreplacing, calc, positioning,fit}
+\usepackage{pgfplots}    
 %------------------------------
 % math packages
 \usepackage[cmex10]{amsmath}  
@@ -426,6 +429,19 @@ d\eta\\
 d\zeta\\
 \end{bmatrix}
 \end{equation}
+
+\tikzset{node style ge/.style={circle}}
+
+\begin{center}
+\begin{tikzpicture}
+\matrix (A) [matrix of math nodes, nodes = {node style ge},column sep=0 mm] 
+{ \frac{\partial x}{\partial\xi}&\frac{\partial x}{\partial\eta}&\frac{\partial x}{\partial\zeta}\\
+\frac{\partial y}{\partial\xi}&\frac{\partial y}{\partial\eta}&\frac{\partial y}{\partial\zeta}\\
+\frac{\partial z}{\partial\xi}&\frac{\partial z}{\partial\eta}&\frac{\partial z}{\partial\zeta}\\
+};
+\end{tikzpicture}
+\end{center}
+
 
 \end{description}
 
