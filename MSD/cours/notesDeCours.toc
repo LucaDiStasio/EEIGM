@@ -1,9 +1,9 @@
-\select@language {english}
-\contentsline {section}{List of Acronyms}{iii}{section*.2}
-\contentsline {section}{List of Symbols}{v}{section*.3}
-\contentsline {section}{Abstract}{vii}{section*.4}
+\select@language {french}
 \contentsline {section}{\numberline {1}Syst\`emes de coordonn\'ees curvilignes}{1}{section.1}
-\contentsline {subsection}{\numberline {1.1}\'Enonc\'e}{1}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Corrig\'e}{1}{subsection.1.2}
-\contentsline {section}{\numberline {2}Second section}{3}{section.2}
-\contentsline {section}{\numberline {A}First appendix}{5}{appendix.A}
+\contentsline {subsection}{\numberline {1.1}Formulation analytique}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Le d\'eplacement infinit\'esimal d'un point et le jacobien de la transformation}{1}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Les vecteurs du rep\`ere local naturel (base covariante)}{2}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}L'\'el\'ement infinit\'esimal de ligne et le tenseur m\'etrique}{2}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}L'\'el\'ement infinit\'esimal de volume}{3}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Les vecteurs de la base contravariante et le gradient d'un fonction scalaire $\nabla f$}{3}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}L'op\'erateur laplacien $\nabla ^{2}$}{5}{subsection.1.7}

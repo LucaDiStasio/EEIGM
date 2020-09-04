@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.11.20)  3 SEP 2020 21:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.11.20)  4 SEP 2020 13:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1214,14 +1214,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/ccicons/m/n' will be
 (Font)              scaled to size 28.79999pt on input line 212.
-<logo-eeigm-ht90.png, id=52, 660.4675pt x 90.3375pt>
+<logo-eeigm-ht90.png, id=56, 660.4675pt x 90.3375pt>
 File: logo-eeigm-ht90.png Graphic file (type png)
 <use logo-eeigm-ht90.png>
 Package pdftex.def Info: logo-eeigm-ht90.png  used on input line 232. on input 
 line 232.
 Package pdftex.def Info: Requested size: 260.03021pt x 35.56593pt on input line
  232.
-<label-logo-ul.png, id=54, 173.64874pt x 60.225pt>
+<label-logo-ul.png, id=58, 173.64874pt x 60.225pt>
 File: label-logo-ul.png Graphic file (type png)
 <use label-logo-ul.png>
 Package pdftex.def Info: label-logo-ul.png  used on input line 232. on input li
@@ -1333,27 +1333,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ] [21] [22]
-No file td.bbl.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1420.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1420.
-(./td.aux)
+ (./td.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1420.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1420.
 
-
-
-Package rerunfilecheck Warning: File `td.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `td.out':
-(rerunfilecheck)             Before: 42E220A3467578377C27D4DE2BE73F94;769
-(rerunfilecheck)             After:  9ED1D1E0B4BF33BB387F25AFEAFB201C;829.
+Package rerunfilecheck Info: File `td.out' has not changed.
+(rerunfilecheck)             Checksum: 9ED1D1E0B4BF33BB387F25AFEAFB201C;829.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1420.
  ) 
 Here is how much of TeX's memory you used:
- 33729 strings out of 492985
- 761338 string characters out of 6136283
+ 33728 strings out of 492985
+ 761337 string characters out of 6136283
  1048034 words of memory out of 5000000
  36567 multiletter control sequences out of 15000+600000
  34733 words of font info for 84 fonts, out of 8000000 for 9000
@@ -1385,10 +1377,10 @@ c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive
 f-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2017/texmf-dist/fon
 ts/type1/public/cm-super/sfxc1728.pfb><c:/texlive/2017/texmf-dist/fonts/type1/u
 rw/helvetic/uhvb8a.pfb>
-Output written on td.pdf (25 pages, 359213 bytes).
+Output written on td.pdf (25 pages, 359123 bytes).
 PDF statistics:
- 440 PDF objects out of 1000 (max. 8388607)
- 378 compressed objects within 4 object streams
+ 444 PDF objects out of 1000 (max. 8388607)
+ 382 compressed objects within 4 object streams
  116 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 119 words of extra memory for PDF output out of 10000 (max. 10000000)
 
