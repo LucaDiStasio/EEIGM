@@ -12,4 +12,5 @@
 \contentsline {subsection}{\numberline {2.1}\'Enonc\'e}{21}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Corrig\'e}{22}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}Rappels th\'eoriques}{22}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Probl\`eme A}{24}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2}Probl\`eme A}{25}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Probl\`eme B}{28}{subsubsection.2.2.3}
