@@ -347,12 +347,12 @@ fleqn,                        % equations are aligned on the left side, comment 
 \ihead{}
 %\ohead{}
 %\ihead{\hyperlink{contents}{Retourner \'a la table des mati\`eres}}
-\ohead{TD 4 (BONUS)}
+\ohead{TD 6 (BONUS)}
 \setheadtopline{2pt}
 \setheadsepline{0.5pt}
 \setfootsepline{0.5pt}
 
-\section*{Exercice optionnel TD 4}
+\section*{Exercice optionnel TD 6}
 
 %\subsection{\'Enonc\'e}
 %
@@ -1613,20 +1613,7 @@ fleqn,                        % equations are aligned on the left side, comment 
 
 %\subsubsection{Probl\`eme B}
 
-Une \'eprouvette m\'etallique \`a section rectangulaire est soumise \`a une charge de traction selon sa longueur. En appelant $x$ la direction selon laquelle la charge est appliqu\'ee, $y$ et $z$ les coordonn\'ees dans la section de l'\'eprouvette, le tenseur de petites d\'eformations dans l'\'eprouvette est \'egal \`a
-
-\begin{equation}
-\mathbf{\underline{\underline{\varepsilon}}}=\begin{bmatrix}
-\varepsilon_{xx}&0&0\\
-0&-\nu\varepsilon_{xx}&0\\
-0&0&-\nu\varepsilon_{xx}\\
-\end{bmatrix}\qquad0<\nu<\frac{1}{2}
-\end{equation}
-
-\begin{enumerate}
-\item D\'eterminer l'expression du tenseur dans sections orient\'ee \`a $30^{\circ}$, $45^{\circ}$, $60^{\circ}$, $90^{\circ}$ par rapport \`a l'axe $x$. Utilisez la loi de rotation de tenseurs et aussi les cercles de Mohr. 
-\item On observe que la fracture de l'\'eprouvette se produit dans une section \`a $45^{\circ}$. Sur la base des r\'esultats au point pr\'ec\'edent, qu'est-ce qu'on peut conclure sur la m\'ecanique de la fracture de l'\'eprouvette ? 
-\end{enumerate}
+Reprenez le sujet des TD 6. Analysez l'\'etat de contrainte et d\'eformation dans une section orient\'ee \`a $45^{\circ}$ dans le centre de l'\'eprouvette. On observe que la fracture de l'\'eprouvette se produit dans cette section \`a $45^{\circ}$. Qu'est-ce que vous pouvez d\'eterminer sur la m\'ecanique de la fracture de l'\'eprouvette ?
 
 \newpage
 \textbf{Correction}
@@ -1638,10 +1625,26 @@ Une \'eprouvette m\'etallique \`a section rectangulaire est soumise \`a une char
 \item \textbf{Loi de rotation de tenseurs }
 
 \begin{equation}
+\underline{\underline{\sigma}}=\begin{bmatrix}
+ \sigma _{\text{xx}} & 0 & 0 \\
+ 0 & 0 & 0 \\
+ 0 & 0 & 0 \\
+\end{bmatrix}=\begin{bmatrix}
+ \frac{N}{A} & 0 & 0 \\
+ 0 & 0 & 0 \\
+ 0 & 0 & 0 \\
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
 \underline{\underline{\varepsilon}}=\begin{bmatrix}
  \varepsilon _{\text{xx}} & 0 & 0 \\
  0 & -\nu  \varepsilon _{\text{xx}} & 0 \\
  0 & 0 & -\nu  \varepsilon _{\text{xx}} \\
+\end{bmatrix}=\begin{bmatrix}
+\frac{N}{EA} & 0 & 0 \\
+ 0 & -\nu  \frac{N}{EA} & 0 \\
+ 0 & 0 & -\nu  \frac{N}{EA} \\
 \end{bmatrix}
 \end{equation}
 
@@ -1654,7 +1657,15 @@ Une \'eprouvette m\'etallique \`a section rectangulaire est soumise \`a une char
 \end{equation}
 
 \begin{equation}
-\underline{\underline{\varepsilon}}^{`}=\underline{\underline{R}}\cdot\underline{\underline{\varepsilon}}\cdot\underline{\underline{R}}^{T}
+\underline{\underline{\sigma}}^{`}=\underline{\underline{R}}\cdot\underline{\underline{\sigma}}\cdot\underline{\underline{R}}^{T}\qquad\qquad\underline{\underline{\varepsilon}}^{`}=\underline{\underline{R}}\cdot\underline{\underline{\varepsilon}}\cdot\underline{\underline{R}}^{T}
+\end{equation}
+
+\begin{equation}
+\underline{\underline{\sigma}}^{`}=\begin{bmatrix}
+\text{Cos}^{2}\left(\theta\right)\sigma _{\text{xx}} & -\text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \sigma_{\text{xx}} & 0 \\
+ -\text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \sigma_{\text{xx}}& \text{Sin}^{2}\left(\theta\right) \sigma_{\text{xx}} & 0 \\
+ 0 & 0 & 0 \\
+\end{bmatrix}
 \end{equation}
 
 \begin{equation}
@@ -1663,121 +1674,44 @@ Une \'eprouvette m\'etallique \`a section rectangulaire est soumise \`a une char
 _{\text{xx}}-\nu  \text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \varepsilon _{\text{xx}} & 0 \\
  -\text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \varepsilon _{\text{xx}}-\nu  \text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \varepsilon _{\text{xx}} & -\nu 
 \text{Cos}^{2}\left(\theta\right) \varepsilon _{\text{xx}}+\text{Sin}^{2}\left(\theta\right) \varepsilon _{\text{xx}} & 0 \\
- 0 & 0 & -\nu  \varepsilon _{\text{xx}} \\
+ 0 & 0 & 0 \\
 \end{bmatrix}
 \end{equation}
 
 \begin{description}
-\item [$30^{\circ}$]
-
-\begin{equation}
-\underline{\underline{\varepsilon}}^{`}=\begin{bmatrix}
- \frac{1}{4} (3-\nu ) \varepsilon _{\text{xx}} & -\frac{ \sqrt{3} }{4}(1+\nu ) \varepsilon _{\text{xx}} & 0 \\
- -\frac{ \sqrt{3} }{4}  (1+\nu ) \varepsilon _{\text{xx}} & \frac{1}{4} (1-3 \nu ) \varepsilon _{\text{xx}} & 0 \\
- 0 & 0 & -\nu  \varepsilon _{\text{xx}} \\
-\end{bmatrix}
-\end{equation}
-
 \item [$45^{\circ}$]
 
-
 \begin{equation}
-\underline{\underline{\varepsilon}}^{`}=\begin{bmatrix}
-\frac{1}{2} (1-\nu ) \varepsilon _{\text{xx}} & -\frac{1}{2} (1+\nu ) \varepsilon _{\text{xx}} & 0 \\
- -\frac{1}{2} (1+\nu ) \varepsilon _{\text{xx}} & \frac{1}{2} (1-\nu ) \varepsilon _{\text{xx}} & 0 \\
- 0 & 0 & -\nu  \varepsilon _{\text{xx}} \\
+\underline{\underline{\sigma}}^{`}=\frac{\sigma_{\text{xx}}}{2}\begin{bmatrix}
+1 & -1 & 0 \\
+ -1& 1 & 0 \\
+ 0 & 0 & 0 \\
+\end{bmatrix}=\frac{N}{2A}\begin{bmatrix}
+1 & -1 & 0 \\
+ -1& 1 & 0 \\
+ 0 & 0 & 0 \\
 \end{bmatrix}
 \end{equation}
 
-\item [$60^{\circ}$]
-
 
 \begin{equation}
-\underline{\underline{\varepsilon}}^{`}=\begin{bmatrix}
-\frac{1}{4} (1-3 \nu ) \varepsilon _{\text{xx}} & -\frac{ \sqrt{3}}{4} (1+\nu ) \varepsilon _{\text{xx}} & 0 \\
- -\frac{ \sqrt{3}}{4} (1+\nu ) \varepsilon _{\text{xx}} & \frac{1}{4} (3-\nu ) \varepsilon _{\text{xx}} & 0 \\
- 0 & 0 & -\nu  \varepsilon _{\text{xx}} \\
-\end{bmatrix}
-\end{equation}
-
-\item [$90^{\circ}$]
- 
- 
-\begin{equation}
-\underline{\underline{\varepsilon}}^{`}=\begin{bmatrix}
- -\nu  \varepsilon _{\text{xx}} & 0 & 0 \\
- 0 & \varepsilon _{\text{xx}} & 0 \\
- 0 & 0 & -\nu  \varepsilon _{\text{xx}} \\
+\underline{\underline{\varepsilon}}^{`}=\varepsilon _{\text{xx}}\begin{bmatrix}
+\frac{1}{2} (1-\nu )  & -\frac{1}{2} (1+\nu )  & 0 \\
+ -\frac{1}{2} (1+\nu )  & \frac{1}{2} (1-\nu )  & 0 \\
+ 0 & 0 & -\nu   \\
+\end{bmatrix}=\frac{N}{EA}\begin{bmatrix}
+\frac{1}{2} (1-\nu )  & -\frac{1}{2} (1+\nu )  & 0 \\
+ -\frac{1}{2} (1+\nu )  & \frac{1}{2} (1-\nu )  & 0 \\
+ 0 & 0 & -\nu   \\
 \end{bmatrix}
 \end{equation}
 
 \end{description}
 
-\item \textbf{Cercles de Mohr}
-
-\begin{equation}
-\varepsilon_{C}=\frac{1}{2} \left(\varepsilon _{x}+  \varepsilon _{y}\right)=\frac{1}{2} \left(\varepsilon _{xx}-\nu  \varepsilon _{xx}\right)
-\end{equation}
-
-\begin{equation}
-R_{\varepsilon}=\frac{1}{2} \left(\varepsilon _{x}-  \varepsilon _{y}\right)=\frac{1}{2} \left(\varepsilon _{xx}+\nu  \varepsilon _{xx}\right)
-\end{equation}
-
-\begin{equation}
-\begin{aligned}
-\varepsilon_{xx}^{`}&=\varepsilon_{C}+R_{\varepsilon} \text{Cos}\left(2\theta\right) \\
-\varepsilon_{yy}^{`}&=\varepsilon_{C}-R_{\varepsilon} \text{Cos}\left(2\theta\right) \\
-\varepsilon_{xy}^{`}&=-R_{\varepsilon} \text{Sin}\left(2\theta\right) \\
-\end{aligned}
-\end{equation}
-
-\begin{description}
-\item [$30^{\circ}$]
-
-\begin{equation}
-\begin{aligned}
-\varepsilon_{xx}^{`}&=\frac{1}{4} (3-\nu ) \varepsilon _{\text{xx}} \\
-\varepsilon_{yy}^{`}&= \frac{1}{4} (1-3 \nu ) \varepsilon _{\text{xx}}  \\
-\varepsilon_{xy}^{`}&=-\frac{ \sqrt{3} }{4}(1+\nu ) \varepsilon _{\text{xx}} \\
-\end{aligned}
-\end{equation}
-
-\item [$45^{\circ}$]
-
-\begin{equation}
-\begin{aligned}
-\varepsilon_{xx}^{`}&=\frac{1}{2} (1-\nu ) \varepsilon _{\text{xx}} \\
-\varepsilon_{yy}^{`}&=\frac{1}{2} (1-\nu ) \varepsilon _{\text{xx}} \\
-\varepsilon_{xy}^{`}&=-\frac{1}{2} (1+\nu ) \varepsilon _{\text{xx}} \\
-\end{aligned}
-\end{equation}
-
-\item [$60^{\circ}$]
-
-
-\begin{equation}
-\begin{aligned}
-\varepsilon_{xx}^{`}&=\frac{1}{4} (1-3 \nu ) \varepsilon _{\text{xx}}\\
-\varepsilon_{yy}^{`}&=\frac{1}{4} (3-\nu ) \varepsilon _{\text{xx}} \\
-\varepsilon_{xy}^{`}&=-\frac{ \sqrt{3}}{4} (1+\nu ) \varepsilon _{\text{xx}} \\
-\end{aligned}
-\end{equation}
-
-\item [$90^{\circ}$]
-  
-\begin{equation}
-\begin{aligned}
-\varepsilon_{xx}^{`}&=-\nu  \varepsilon _{\text{xx}}\\
-\varepsilon_{yy}^{`}&=\varepsilon _{\text{xx}}\\
-\varepsilon_{xy}^{`}&=0 \\
-\end{aligned}
-\end{equation}
-
-\end{description}
 
 \end{itemize}
 
-\item Vu que : $\frac{\sqrt{3}}{4}=0.433<0.5=\frac{1}{2}$, dans la section \`a $45^{\circ}$ on a la valuer maximale du glissement $\varepsilon_{xy}$. La fracture de l'\'eprouvette se produit par glissement du mat\'eriau \`a l'\'echelle microscopique.
+\item Dans la section \`a $45^{\circ}$ on a les valeurs maximales de cisaillement et glissement. La fracture de l'\'eprouvette se produit par glissement du mat\'eriau \`a l'\'echelle microscopique, produit par la pr\'esence de la contrainte de cisaillement dans le plan \`a $45^{\circ}$.
 \end{enumerate}
 
 %\cleardoublepageusingstyle{scrheadings}
