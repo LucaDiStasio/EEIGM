@@ -347,12 +347,54 @@ fleqn,                        % equations are aligned on the left side, comment 
 \ihead{}
 %\ohead{}
 %\ihead{\hyperlink{contents}{Retourner \'a la table des mati\`eres}}
-\ohead{TD 6 (BONUS)}
+\ohead{TD 8 (BONUS)}
 \setheadtopline{2pt}
 \setheadsepline{0.5pt}
 \setfootsepline{0.5pt}
 
-\section*{Exercice optionnel TD 6}
+\section*{Exercice optionnel TD 8}
+
+Un disque du compresseur du turbofan (ou turbosoufflante) \`a trois axes Rolls-Royce RB211-535E4B, utilis\'e dans le Boeing B-757, a un diam\`etre de 0.7 m et il est constitu\'e par un alliage m\'etallique avec densit\'e $\rho=6500\left[\frac{kg}{m^{3}}\right]$, module d'Young $E=500\left[GPa\right]$, coefficient de Poisson $\nu=0.3\left[-\right]$ et limite d'\'elasticit\'e lin\'eaire $\sigma_{0}=600\left[MPa\right]$.
+
+\begin{enumerate}
+\item D\'eterminez la valeur maximale de la v\'elocit\'e de rotation de la turbine \`a laquelle l'alliage sort du r\'egime \'elastique lin\'eaire.
+\item Evaluez la distance minimale requise entre les aubes du compresseur et la nacelle pour \'eviter le contact.
+\end{enumerate}
+
+\textit{Remarque}\\
+Nous pouvons mod\'eliser la pr\'esence de l'acc\'el\'eration centrip\`ete en consid\'erant la pr\'esence d'une force de volume $\underline{\mathbf{b}}=\begin{bmatrix}\rho r\omega^{2}\\0\\0\end{bmatrix}$ o\`u $\omega$ est la v\'elocit\'e de rotation de la turbine.\\
+
+\textit{Relations utiles}
+
+\begin{equation}
+\begin{cases}
+\varepsilon_{rr}=\frac{\partial u_{r}}{\partial r}\\
+\varepsilon_{\theta\theta}=\frac{u_{r}}{r}+\frac{1}{r}\frac{\partial u_{\theta}}{\partial\theta}\\
+\varepsilon_{zz}=\frac{\partial u_{z}}{\partial z}\\
+\varepsilon_{r\theta}=\frac{1}{2}\left(\frac{1}{r}\frac{\partial u_{r}}{\partial \theta}+\frac{\partial u_{\theta}}{\partial r}-\frac{u_{\theta}}{r}\right)\\
+\varepsilon_{\theta z}=\frac{1}{2}\left(\frac{1}{r}\frac{\partial u_{z}}{\partial\theta}+\frac{\partial u_{\theta}}{\partial z}\right)\\
+\varepsilon_{rz}=\frac{1}{2}\left(\frac{\partial u_{z}}{\partial r}+\frac{\partial u_{r}}{\partial z}\right)
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\sigma_{rr}=\frac{E}{1+\nu}\left(\varepsilon_{rr}+\frac{\nu}{1-2\nu}\left(\varepsilon_{rr}+\varepsilon_{\theta\theta}+\varepsilon_{zz}\right)\right)\\
+\sigma_{\theta\theta}=\frac{E}{1+\nu}\left(\varepsilon_{\theta\theta}+\frac{\nu}{1-2\nu}\left(\varepsilon_{rr}+\varepsilon_{\theta\theta}+\varepsilon_{zz}\right)\right)\\
+\sigma_{zz}=\frac{E}{1+\nu}\left(\varepsilon_{zz}+\frac{\nu}{1-2\nu}\left(\varepsilon_{rr}+\varepsilon_{\theta\theta}+\varepsilon_{zz}\right)\right)\\
+\sigma_{r\theta}=\frac{E}{1+\nu}\varepsilon_{r\theta}\\
+\sigma_{\theta z}=\frac{E}{1+\nu}\varepsilon_{\theta z}\\
+\sigma_{r z}=\frac{E}{1+\nu}\varepsilon_{r z}\\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+\frac{\partial\sigma_{rr}}{\partial r}+\frac{1}{r}\left(\frac{\partial\sigma_{r\theta}}{\partial\theta}+\sigma_{rr}-\sigma_{\theta}\right)+\frac{\partial\sigma_{rz}}{\partial z}+b_{r}=0\\
+\frac{\partial\sigma_{r\theta}}{\partial r}+\frac{1}{r}\left(\frac{\partial\sigma_{\theta\theta}}{\partial\theta}+2\sigma_{r\theta}\right)+\frac{\partial\sigma_{\theta z}}{\partial z}+b_{\theta}=0\\
+\frac{\partial\sigma_{rz}}{\partial r}+\frac{1}{r}\left(\frac{\partial\sigma_{\theta z}}{\partial\theta}+\sigma_{rz}\right)+\frac{\partial\sigma_{zz}}{\partial z}+b_{z}=0\\
+\end{cases}
+\end{equation}
 
 %\subsection{\'Enonc\'e}
 %
@@ -1613,106 +1655,106 @@ fleqn,                        % equations are aligned on the left side, comment 
 
 %\subsubsection{Probl\`eme B}
 
-Reprenez le sujet des TD 6. Analysez l'\'etat de contrainte et d\'eformation dans une section orient\'ee \`a $45^{\circ}$ dans le centre de l'\'eprouvette. On observe que la fracture de l'\'eprouvette se produit dans cette section \`a $45^{\circ}$. Qu'est-ce que vous pouvez d\'eterminer sur la m\'ecanique de la fracture de l'\'eprouvette ?
-
-\newpage
-\textbf{Correction}
-
-\begin{enumerate}
-\item 
-
-\begin{itemize}
-\item \textbf{Loi de rotation de tenseurs }
-
-\begin{equation}
-\underline{\underline{\sigma}}=\begin{bmatrix}
- \sigma _{\text{xx}} & 0 & 0 \\
- 0 & 0 & 0 \\
- 0 & 0 & 0 \\
-\end{bmatrix}=\begin{bmatrix}
- \frac{N}{A} & 0 & 0 \\
- 0 & 0 & 0 \\
- 0 & 0 & 0 \\
-\end{bmatrix}
-\end{equation}
-
-\begin{equation}
-\underline{\underline{\varepsilon}}=\begin{bmatrix}
- \varepsilon _{\text{xx}} & 0 & 0 \\
- 0 & -\nu  \varepsilon _{\text{xx}} & 0 \\
- 0 & 0 & -\nu  \varepsilon _{\text{xx}} \\
-\end{bmatrix}=\begin{bmatrix}
-\frac{N}{EA} & 0 & 0 \\
- 0 & -\nu  \frac{N}{EA} & 0 \\
- 0 & 0 & -\nu  \frac{N}{EA} \\
-\end{bmatrix}
-\end{equation}
-
-\begin{equation}
-\underline{\underline{R}}=\begin{bmatrix}
-  \text{Cos}\left(\theta\right) & \text{Sin}\left(\theta\right) & 0 \\
- -\text{Sin}\left(\theta\right) & \text{Cos}\left(\theta\right) & 0 \\
- 0 & 0 & 1 \\
-\end{bmatrix}
-\end{equation}
-
-\begin{equation}
-\underline{\underline{\sigma}}^{`}=\underline{\underline{R}}\cdot\underline{\underline{\sigma}}\cdot\underline{\underline{R}}^{T}\qquad\qquad\underline{\underline{\varepsilon}}^{`}=\underline{\underline{R}}\cdot\underline{\underline{\varepsilon}}\cdot\underline{\underline{R}}^{T}
-\end{equation}
-
-\begin{equation}
-\underline{\underline{\sigma}}^{`}=\begin{bmatrix}
-\text{Cos}^{2}\left(\theta\right)\sigma _{\text{xx}} & -\text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \sigma_{\text{xx}} & 0 \\
- -\text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \sigma_{\text{xx}}& \text{Sin}^{2}\left(\theta\right) \sigma_{\text{xx}} & 0 \\
- 0 & 0 & 0 \\
-\end{bmatrix}
-\end{equation}
-
-\begin{equation}
-\underline{\underline{\varepsilon}}^{`}=\begin{bmatrix}
-\text{Cos}^{2}\left(\theta\right) \varepsilon _{\text{xx}}-\nu  \text{Sin}^{2}\left(\theta\right) \varepsilon _{\text{xx}} & -\text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \varepsilon
-_{\text{xx}}-\nu  \text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \varepsilon _{\text{xx}} & 0 \\
- -\text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \varepsilon _{\text{xx}}-\nu  \text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \varepsilon _{\text{xx}} & -\nu 
-\text{Cos}^{2}\left(\theta\right) \varepsilon _{\text{xx}}+\text{Sin}^{2}\left(\theta\right) \varepsilon _{\text{xx}} & 0 \\
- 0 & 0 & 0 \\
-\end{bmatrix}
-\end{equation}
-
-\begin{description}
-\item [$45^{\circ}$]
-
-\begin{equation}
-\underline{\underline{\sigma}}^{`}=\frac{\sigma_{\text{xx}}}{2}\begin{bmatrix}
-1 & -1 & 0 \\
- -1& 1 & 0 \\
- 0 & 0 & 0 \\
-\end{bmatrix}=\frac{N}{2A}\begin{bmatrix}
-1 & -1 & 0 \\
- -1& 1 & 0 \\
- 0 & 0 & 0 \\
-\end{bmatrix}
-\end{equation}
-
-
-\begin{equation}
-\underline{\underline{\varepsilon}}^{`}=\varepsilon _{\text{xx}}\begin{bmatrix}
-\frac{1}{2} (1-\nu )  & -\frac{1}{2} (1+\nu )  & 0 \\
- -\frac{1}{2} (1+\nu )  & \frac{1}{2} (1-\nu )  & 0 \\
- 0 & 0 & -\nu   \\
-\end{bmatrix}=\frac{N}{EA}\begin{bmatrix}
-\frac{1}{2} (1-\nu )  & -\frac{1}{2} (1+\nu )  & 0 \\
- -\frac{1}{2} (1+\nu )  & \frac{1}{2} (1-\nu )  & 0 \\
- 0 & 0 & -\nu   \\
-\end{bmatrix}
-\end{equation}
-
-\end{description}
-
-
-\end{itemize}
-
-\item Dans la section \`a $45^{\circ}$ on a les valeurs maximales de cisaillement et glissement. La fracture de l'\'eprouvette se produit par glissement du mat\'eriau \`a l'\'echelle microscopique, produit par la pr\'esence de la contrainte de cisaillement dans le plan \`a $45^{\circ}$.
-\end{enumerate}
+%Reprenez le sujet des TD 6. Analysez l'\'etat de contrainte et d\'eformation dans une section orient\'ee \`a $45^{\circ}$ dans le centre de l'\'eprouvette. On observe que la fracture de l'\'eprouvette se produit dans cette section \`a $45^{\circ}$. Qu'est-ce que vous pouvez d\'eterminer sur la m\'ecanique de la fracture de l'\'eprouvette ?
+%
+%\newpage
+%\textbf{Correction}
+%
+%\begin{enumerate}
+%\item 
+%
+%\begin{itemize}
+%\item \textbf{Loi de rotation de tenseurs }
+%
+%\begin{equation}
+%\underline{\underline{\sigma}}=\begin{bmatrix}
+% \sigma _{\text{xx}} & 0 & 0 \\
+% 0 & 0 & 0 \\
+% 0 & 0 & 0 \\
+%\end{bmatrix}=\begin{bmatrix}
+% \frac{N}{A} & 0 & 0 \\
+% 0 & 0 & 0 \\
+% 0 & 0 & 0 \\
+%\end{bmatrix}
+%\end{equation}
+%
+%\begin{equation}
+%\underline{\underline{\varepsilon}}=\begin{bmatrix}
+% \varepsilon _{\text{xx}} & 0 & 0 \\
+% 0 & -\nu  \varepsilon _{\text{xx}} & 0 \\
+% 0 & 0 & -\nu  \varepsilon _{\text{xx}} \\
+%\end{bmatrix}=\begin{bmatrix}
+%\frac{N}{EA} & 0 & 0 \\
+% 0 & -\nu  \frac{N}{EA} & 0 \\
+% 0 & 0 & -\nu  \frac{N}{EA} \\
+%\end{bmatrix}
+%\end{equation}
+%
+%\begin{equation}
+%\underline{\underline{R}}=\begin{bmatrix}
+%  \text{Cos}\left(\theta\right) & \text{Sin}\left(\theta\right) & 0 \\
+% -\text{Sin}\left(\theta\right) & \text{Cos}\left(\theta\right) & 0 \\
+% 0 & 0 & 1 \\
+%\end{bmatrix}
+%\end{equation}
+%
+%\begin{equation}
+%\underline{\underline{\sigma}}^{`}=\underline{\underline{R}}\cdot\underline{\underline{\sigma}}\cdot\underline{\underline{R}}^{T}\qquad\qquad\underline{\underline{\varepsilon}}^{`}=\underline{\underline{R}}\cdot\underline{\underline{\varepsilon}}\cdot\underline{\underline{R}}^{T}
+%\end{equation}
+%
+%\begin{equation}
+%\underline{\underline{\sigma}}^{`}=\begin{bmatrix}
+%\text{Cos}^{2}\left(\theta\right)\sigma _{\text{xx}} & -\text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \sigma_{\text{xx}} & 0 \\
+% -\text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \sigma_{\text{xx}}& \text{Sin}^{2}\left(\theta\right) \sigma_{\text{xx}} & 0 \\
+% 0 & 0 & 0 \\
+%\end{bmatrix}
+%\end{equation}
+%
+%\begin{equation}
+%\underline{\underline{\varepsilon}}^{`}=\begin{bmatrix}
+%\text{Cos}^{2}\left(\theta\right) \varepsilon _{\text{xx}}-\nu  \text{Sin}^{2}\left(\theta\right) \varepsilon _{\text{xx}} & -\text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \varepsilon
+%_{\text{xx}}-\nu  \text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \varepsilon _{\text{xx}} & 0 \\
+% -\text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \varepsilon _{\text{xx}}-\nu  \text{Cos}\left(\theta\right) \text{Sin}\left(\theta\right) \varepsilon _{\text{xx}} & -\nu 
+%\text{Cos}^{2}\left(\theta\right) \varepsilon _{\text{xx}}+\text{Sin}^{2}\left(\theta\right) \varepsilon _{\text{xx}} & 0 \\
+% 0 & 0 & 0 \\
+%\end{bmatrix}
+%\end{equation}
+%
+%\begin{description}
+%\item [$45^{\circ}$]
+%
+%\begin{equation}
+%\underline{\underline{\sigma}}^{`}=\frac{\sigma_{\text{xx}}}{2}\begin{bmatrix}
+%1 & -1 & 0 \\
+% -1& 1 & 0 \\
+% 0 & 0 & 0 \\
+%\end{bmatrix}=\frac{N}{2A}\begin{bmatrix}
+%1 & -1 & 0 \\
+% -1& 1 & 0 \\
+% 0 & 0 & 0 \\
+%\end{bmatrix}
+%\end{equation}
+%
+%
+%\begin{equation}
+%\underline{\underline{\varepsilon}}^{`}=\varepsilon _{\text{xx}}\begin{bmatrix}
+%\frac{1}{2} (1-\nu )  & -\frac{1}{2} (1+\nu )  & 0 \\
+% -\frac{1}{2} (1+\nu )  & \frac{1}{2} (1-\nu )  & 0 \\
+% 0 & 0 & -\nu   \\
+%\end{bmatrix}=\frac{N}{EA}\begin{bmatrix}
+%\frac{1}{2} (1-\nu )  & -\frac{1}{2} (1+\nu )  & 0 \\
+% -\frac{1}{2} (1+\nu )  & \frac{1}{2} (1-\nu )  & 0 \\
+% 0 & 0 & -\nu   \\
+%\end{bmatrix}
+%\end{equation}
+%
+%\end{description}
+%
+%
+%\end{itemize}
+%
+%\item Dans la section \`a $45^{\circ}$ on a les valeurs maximales de cisaillement et glissement. La fracture de l'\'eprouvette se produit par glissement du mat\'eriau \`a l'\'echelle microscopique, produit par la pr\'esence de la contrainte de cisaillement dans le plan \`a $45^{\circ}$.
+%\end{enumerate}
 
 %\cleardoublepageusingstyle{scrheadings}
 
